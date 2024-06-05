@@ -25,7 +25,7 @@ struct ArticlePortfolioAppApp: App {
                         }
                     })
                     .overlay(alignment: .top) {
-                        // ToastView(proxy: proxy)
+                        /// ToastView(proxy: proxy)
                     }
                     .modelContainer(for: ArticleSwiftDataModel.self)
             }
