@@ -11,6 +11,19 @@
 		021814602C105A6100F39DB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218145F2C105A6100F39DB9 /* ContentView.swift */; };
 		021814622C105A6200F39DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021814612C105A6200F39DB9 /* Assets.xcassets */; };
 		021814652C105A6200F39DB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 021814642C105A6200F39DB9 /* Preview Assets.xcassets */; };
+		021814732C105D4600F39DB9 /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814722C105D4600F39DB9 /* StatusCode.swift */; };
+		021814762C105D9700F39DB9 /* LoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814752C105D9700F39DB9 /* LoggerPlugin.swift */; };
+		0218147A2C105DB100F39DB9 /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814792C105DB100F39DB9 /* DateFormatter+Ext.swift */; };
+		0218147E2C105DDA00F39DB9 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218147D2C105DDA00F39DB9 /* LogLevel.swift */; };
+		021814802C105DE100F39DB9 /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218147F2C105DE100F39DB9 /* CustomLogger.swift */; };
+		021814832C105E1D00F39DB9 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814822C105E1D00F39DB9 /* APIEnvironment.swift */; };
+		021814862C105E5700F39DB9 /* ArticleResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814852C105E5700F39DB9 /* ArticleResponseDto.swift */; };
+		021814882C105E6300F39DB9 /* ArticleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814872C105E6300F39DB9 /* ArticleDto.swift */; };
+		0218148C2C105EC300F39DB9 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148B2C105EC300F39DB9 /* HomeAPI.swift */; };
+		0218148E2C105EDF00F39DB9 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148D2C105EDF00F39DB9 /* String+Ext.swift */; };
+		021814902C105F2100F39DB9 /* HomeServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148F2C105F2100F39DB9 /* HomeServer.swift */; };
+		021814922C105F4800F39DB9 /* MoyaProvider+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814912C105F4800F39DB9 /* MoyaProvider+Ext.swift */; };
+		021814952C105F5D00F39DB9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814942C105F5D00F39DB9 /* Constants.swift */; };
 		ED862552C6A693FD285ADF3E /* Pods_ArticlePortfolioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA163E00BB48B084A0B18630 /* Pods_ArticlePortfolioApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +33,19 @@
 		0218145F2C105A6100F39DB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		021814612C105A6200F39DB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		021814642C105A6200F39DB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		021814722C105D4600F39DB9 /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		021814752C105D9700F39DB9 /* LoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerPlugin.swift; sourceTree = "<group>"; };
+		021814792C105DB100F39DB9 /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
+		0218147D2C105DDA00F39DB9 /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		0218147F2C105DE100F39DB9 /* CustomLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLogger.swift; sourceTree = "<group>"; };
+		021814822C105E1D00F39DB9 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		021814852C105E5700F39DB9 /* ArticleResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponseDto.swift; sourceTree = "<group>"; };
+		021814872C105E6300F39DB9 /* ArticleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDto.swift; sourceTree = "<group>"; };
+		0218148B2C105EC300F39DB9 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		0218148D2C105EDF00F39DB9 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		0218148F2C105F2100F39DB9 /* HomeServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServer.swift; sourceTree = "<group>"; };
+		021814912C105F4800F39DB9 /* MoyaProvider+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Ext.swift"; sourceTree = "<group>"; };
+		021814942C105F5D00F39DB9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1F4182F6C312A34706A64FD0 /* Pods-ArticlePortfolioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.release.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.release.xcconfig"; sourceTree = "<group>"; };
 		62B840B374381A0DAC83CF61 /* Pods-ArticlePortfolioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.debug.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BA163E00BB48B084A0B18630 /* Pods_ArticlePortfolioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticlePortfolioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +127,8 @@
 		0218146E2C105AED00F39DB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				021814772C105DAA00F39DB9 /* Utilis */,
+				021814702C105D3F00F39DB9 /* Networking */,
 				0218146F2C105AF900F39DB9 /* Definitions */,
 				0218146C2C105AE100F39DB9 /* Presentation */,
 			);
@@ -112,6 +140,113 @@
 			children = (
 			);
 			path = Definitions;
+			sourceTree = "<group>";
+		};
+		021814702C105D3F00F39DB9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				021814892C105EB500F39DB9 /* Servers */,
+				021814842C105E4F00F39DB9 /* Models */,
+				021814812C105E0600F39DB9 /* APIEnvironment */,
+				021814742C105D8F00F39DB9 /* MoyaPlugins */,
+				021814712C105D4100F39DB9 /* StatusCodes */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		021814712C105D4100F39DB9 /* StatusCodes */ = {
+			isa = PBXGroup;
+			children = (
+				021814722C105D4600F39DB9 /* StatusCode.swift */,
+			);
+			path = StatusCodes;
+			sourceTree = "<group>";
+		};
+		021814742C105D8F00F39DB9 /* MoyaPlugins */ = {
+			isa = PBXGroup;
+			children = (
+				021814752C105D9700F39DB9 /* LoggerPlugin.swift */,
+			);
+			path = MoyaPlugins;
+			sourceTree = "<group>";
+		};
+		021814772C105DAA00F39DB9 /* Utilis */ = {
+			isa = PBXGroup;
+			children = (
+				021814932C105F5900F39DB9 /* Constants */,
+				0218147B2C105DD400F39DB9 /* Helpers */,
+				021814782C105DAD00F39DB9 /* Extensions */,
+			);
+			path = Utilis;
+			sourceTree = "<group>";
+		};
+		021814782C105DAD00F39DB9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				021814792C105DB100F39DB9 /* DateFormatter+Ext.swift */,
+				0218148D2C105EDF00F39DB9 /* String+Ext.swift */,
+				021814912C105F4800F39DB9 /* MoyaProvider+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0218147B2C105DD400F39DB9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0218147C2C105DD600F39DB9 /* Logger */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0218147C2C105DD600F39DB9 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				0218147D2C105DDA00F39DB9 /* LogLevel.swift */,
+				0218147F2C105DE100F39DB9 /* CustomLogger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		021814812C105E0600F39DB9 /* APIEnvironment */ = {
+			isa = PBXGroup;
+			children = (
+				021814822C105E1D00F39DB9 /* APIEnvironment.swift */,
+			);
+			path = APIEnvironment;
+			sourceTree = "<group>";
+		};
+		021814842C105E4F00F39DB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				021814852C105E5700F39DB9 /* ArticleResponseDto.swift */,
+				021814872C105E6300F39DB9 /* ArticleDto.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		021814892C105EB500F39DB9 /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+				0218148A2C105EBD00F39DB9 /* Home */,
+			);
+			path = Servers;
+			sourceTree = "<group>";
+		};
+		0218148A2C105EBD00F39DB9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0218148B2C105EC300F39DB9 /* HomeAPI.swift */,
+				0218148F2C105F2100F39DB9 /* HomeServer.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		021814932C105F5900F39DB9 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				021814942C105F5D00F39DB9 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		7A19B66781155FCA59738AF4 /* Pods */ = {
@@ -245,8 +380,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021814922C105F4800F39DB9 /* MoyaProvider+Ext.swift in Sources */,
+				021814762C105D9700F39DB9 /* LoggerPlugin.swift in Sources */,
+				021814802C105DE100F39DB9 /* CustomLogger.swift in Sources */,
+				021814882C105E6300F39DB9 /* ArticleDto.swift in Sources */,
+				021814862C105E5700F39DB9 /* ArticleResponseDto.swift in Sources */,
+				021814952C105F5D00F39DB9 /* Constants.swift in Sources */,
+				0218147E2C105DDA00F39DB9 /* LogLevel.swift in Sources */,
 				021814602C105A6100F39DB9 /* ContentView.swift in Sources */,
+				0218148E2C105EDF00F39DB9 /* String+Ext.swift in Sources */,
+				0218148C2C105EC300F39DB9 /* HomeAPI.swift in Sources */,
+				021814902C105F2100F39DB9 /* HomeServer.swift in Sources */,
 				0218145E2C105A6100F39DB9 /* ArticlePortfolioAppApp.swift in Sources */,
+				021814732C105D4600F39DB9 /* StatusCode.swift in Sources */,
+				021814832C105E1D00F39DB9 /* APIEnvironment.swift in Sources */,
+				0218147A2C105DB100F39DB9 /* DateFormatter+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
