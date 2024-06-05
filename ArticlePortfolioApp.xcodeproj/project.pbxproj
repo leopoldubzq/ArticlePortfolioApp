@@ -76,6 +76,7 @@
 		021815542C106BBA00F39DB9 /* TestSearchPhrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218154D2C106BBA00F39DB9 /* TestSearchPhrases.swift */; };
 		021815552C106BBA00F39DB9 /* HomerServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218154F2C106BBA00F39DB9 /* HomerServerTests.swift */; };
 		02FDF8782C1072A500B450FC /* SettingsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8772C1072A500B450FC /* SettingsOptions.swift */; };
+		02FDF87C2C10796A00B450FC /* ArticleSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF87B2C10796A00B450FC /* ArticleSwiftDataModel.swift */; };
 		0F09119B31A3807AEAA348EA /* Pods_ArticlePortfolioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +162,7 @@
 		0218154D2C106BBA00F39DB9 /* TestSearchPhrases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSearchPhrases.swift; sourceTree = "<group>"; };
 		0218154F2C106BBA00F39DB9 /* HomerServerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomerServerTests.swift; sourceTree = "<group>"; };
 		02FDF8772C1072A500B450FC /* SettingsOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptions.swift; sourceTree = "<group>"; };
+		02FDF87B2C10796A00B450FC /* ArticleSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSwiftDataModel.swift; sourceTree = "<group>"; };
 		54B65206D2042925348EDE11 /* Pods-ArticlePortfolioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.release.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.release.xcconfig"; sourceTree = "<group>"; };
 		74661D37A0ABBEF684199368 /* Pods-ArticlePortfolioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.debug.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticlePortfolioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +256,7 @@
 		0218146E2C105AED00F39DB9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				02FDF8792C10794C00B450FC /* Persistence */,
 				021815042C1063B800F39DB9 /* DI */,
 				021814B22C1062A300F39DB9 /* Navigation */,
 				021814772C105DAA00F39DB9 /* Utilis */,
@@ -736,6 +739,22 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		02FDF8792C10794C00B450FC /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF87A2C10795200B450FC /* Models */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		02FDF87A2C10795200B450FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF87B2C10796A00B450FC /* ArticleSwiftDataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6B6EF66AB2CFDD9E8980726D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -920,6 +939,7 @@
 				021815192C1064B000F39DB9 /* SettingsScreenResolver.swift in Sources */,
 				021814952C105F5D00F39DB9 /* Constants.swift in Sources */,
 				0218149A2C10603C00F39DB9 /* ArticleRowView.swift in Sources */,
+				02FDF87C2C10796A00B450FC /* ArticleSwiftDataModel.swift in Sources */,
 				0218147E2C105DDA00F39DB9 /* LogLevel.swift in Sources */,
 				021815232C10651C00F39DB9 /* ArticleDetailModule.swift in Sources */,
 				021814EB2C1062BD00F39DB9 /* NavigationStore+ArticleDetailRouter.swift in Sources */,

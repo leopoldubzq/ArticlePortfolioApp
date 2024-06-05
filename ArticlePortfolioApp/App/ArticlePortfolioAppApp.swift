@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct ArticlePortfolioAppApp: App {
@@ -26,6 +27,7 @@ struct ArticlePortfolioAppApp: App {
                     .overlay(alignment: .top) {
                         // ToastView(proxy: proxy)
                     }
+                    .modelContainer(for: ArticleSwiftDataModel.self)
             }
         }
     }
