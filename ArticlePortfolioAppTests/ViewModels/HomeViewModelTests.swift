@@ -19,13 +19,13 @@ final class HomeViewModelTests: XCTestCase {
         super.tearDown()
     }
     
-    func initializeSutWithStatusCode(statusCode: StatusCode) {
+    func initializeSutWithStatusCode(_ statusCode: StatusCode) {
         sut = HomeViewModel(homeDomainManager: HomeDomainManager(statusCode: statusCode))
     }
     
     func testArticlesSuccessNotEmpty() {
         //Given
-        initializeSutWithStatusCode(statusCode: .ok)
+        initializeSutWithStatusCode(.ok)
         
         //When
         sut.fetchArticles()
@@ -46,7 +46,7 @@ final class HomeViewModelTests: XCTestCase {
     
     func testEmptyArticlesFailure() {
         // Given
-        initializeSutWithStatusCode(statusCode: .internalServerError)
+        initializeSutWithStatusCode(.internalServerError)
         
         //When
         sut.fetchArticles()
@@ -67,7 +67,7 @@ final class HomeViewModelTests: XCTestCase {
     
     func testSearchPhrase() {
         //Given
-        initializeSutWithStatusCode(statusCode: .ok)
+        initializeSutWithStatusCode(.ok)
         
         //When
         sut.searchPhrase = TestSearchPhrases.apple.rawValue
@@ -88,7 +88,7 @@ final class HomeViewModelTests: XCTestCase {
     
     func testEmptySearchPhrase() {
         //Given
-        initializeSutWithStatusCode(statusCode: .ok)
+        initializeSutWithStatusCode(.ok)
         
         //When
         sut.searchPhrase = TestSearchPhrases.apple.rawValue
@@ -110,7 +110,7 @@ final class HomeViewModelTests: XCTestCase {
     
     func testSearchPhraseWithFailureServiceProvider() {
         //Given
-        initializeSutWithStatusCode(statusCode: .internalServerError)
+        initializeSutWithStatusCode(.internalServerError)
         
         //When
         sut.searchPhrase = TestSearchPhrases.apple.rawValue
