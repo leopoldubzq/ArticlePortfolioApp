@@ -1,7 +1,7 @@
 # Article Portfolio App
 
 ## Description
-**Article Portfolio App** is a mobile iOS application designed to display technology-related articles. By default, the app shows top headlines, but users can search for specific tech articles using queries like "Jeff Bezos" or "Apple". Users can also add specific articles to their favorites and view them in a dedicated "Favorites" tab. The app is built using SwiftUI with a clean MVVM architecture, utilizing Combine and the Moya framework. The project also includes unit tests with mock servers.
+**Article Portfolio App** is a mobile iOS application designed to display technology-related articles. By default, the app shows top headlines, but users can search for specific tech articles using queries. Users can also add specific articles to their favorites and view them in a dedicated "Favorites" tab. The app is built using SwiftUI with a clean MVVM architecture, utilizing Combine and the Moya framework. The project also includes unit tests with mock servers.
 
 ## Features
 - Display top tech headlines
@@ -18,7 +18,7 @@
 Upon launching the app, you will see the top tech headlines by default. To search for specific articles:
 
 1. **Tap on the search bar.**
-2. **Enter your query (e.g., "Jeff Bezos" or "Apple").**
+2. **Enter your query.**
 3. **Browse through the search results.**
    
 To add an article to your favorites:
