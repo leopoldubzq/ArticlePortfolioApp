@@ -67,9 +67,9 @@ struct ArticleRowView: View {
                         Button { onTapHeart?() } label: {
                             HStack {
                                 if isFavourite {
-                                    Text("Add to favourites")
-                                } else {
                                     Text("Remove from favourites")
+                                } else {
+                                    Text("Add to favourites")
                                 }
                                 Image(systemName: isFavourite ? "heart.fill" : "heart")
                             }
