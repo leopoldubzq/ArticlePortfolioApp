@@ -5,9 +5,9 @@ struct ArticleDetailNode: Hashable {
     
     private let uuid: UUID = UUID()
     
-    let articleData: ArticleDto
+    let articleData: any ArticleModelProtocol
     
-    init(articleData: ArticleDto) {
+    init(articleData: any ArticleModelProtocol) {
         self.articleData = articleData
     }
     

@@ -1,5 +1,6 @@
 import SwiftUI
 import Kingfisher
+import SwiftData
 
 struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
     
@@ -8,6 +9,8 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
     @StateObject private var viewModel: ViewModel
     @State private var scrollOffsetY: CGFloat = .zero
     @State private var isBarHidden = false
+    @Environment(\.modelContext) private var modelContext
+    @Query private var favouriteArticles: [ArticleSwiftDataModel]
     
     init(viewModel: ViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -19,10 +22,8 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
             HiddenNavBarView {
                 OffsetObservingScrollView(offset: $scrollOffsetY) {
                     VStack(spacing: 20) {
-                        if let imageUrl = viewModel.articleModel.imageUrl {
-                            ArticleImage(url: imageUrl)
-                        }
-                        Text(viewModel.articleModel.description ?? "")
+                        ArticleImage(url: viewModel.articleModel.imageUrl)
+                        Text(viewModel.articleModel.articleDescription ?? "")
                             .padding(.horizontal)
                         Spacer()
                     }
@@ -32,29 +33,46 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
                 .overlay(alignment: .top) {
                     BlurView()
                         .frame(height: proxy.safeAreaInsets.top + 50)
-                    
                         .ignoresSafeArea()
                         .overlay(alignment: .bottom) {
                             Text("Article")
-                                .padding(.vertical)
+                                .padding(.bottom)
                                 .foregroundStyle(.white)
                                 .fontWeight(.semibold)
                                 .font(.title3)
                                 .opacity(-scrollOffsetY * 0.03)
                         }
                         .opacity(-scrollOffsetY * 0.01)
-                        .overlay(alignment: .bottomLeading) {
-                            BackButton()
-                                .padding(.bottom, 3)
+                        .overlay(alignment: .bottom) {
+                            HStack {
+                                BackButton()
+                                Spacer()
+                                Button { 
+                                    viewModel.updateFavouriteState(with: modelContext)
+                                } label: {
+                                    Image(systemName: isFavourite() ? "heart.fill" : "heart")
+                                        .resizable()
+                                        .contentTransition(.symbolEffect(.replace))
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 20, height: 20)
+                                }
+                                .tint(.white)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal)
+                            .padding(.bottom, 4)
                         }
                 }
                 .ignoresSafeArea()
             }
         }
+        .onLoad {
+            viewModel.fetchFavouriteArticlesFromDB(with: modelContext)
+        }
     }
     
     @ViewBuilder
-    private func ArticleImage(url: URL) -> some View {
+    private func ArticleImage(url: URL?) -> some View {
         GeometryReader { proxy in
             KFImage(url)
                 .resizable()
@@ -70,9 +88,24 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
                         )
                     )
                 )
+                .overlay(alignment: .top) {
+                    Rectangle()
+                        .fill(
+                            .linearGradient(colors: [
+                                Color(uiColor: .systemBackground).opacity(0.7),
+                                Color(uiColor: .systemBackground).opacity(0.6),
+                                Color(uiColor: .systemBackground).opacity(0.5),
+                                Color(uiColor: .systemBackground).opacity(0.2),
+                                Color(uiColor: .systemBackground).opacity(0.1),
+                                Color(uiColor: .systemBackground).opacity(0.05),
+                                Color(uiColor: .systemBackground).opacity(0.01)
+                            ], startPoint: .top, endPoint: .center)
+                        )
+                }
                 .offset(y: min(0, -scrollOffsetY))
         }
         .frame(height: 450)
+        
     }
     
     @ViewBuilder
@@ -89,15 +122,26 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
                 .fontWeight(.semibold)
                 .scaleEffect(1 + min(0.2, max(0, -scrollOffsetY * 0.005)))
         }
-        .padding(.leading, 16)
-        .padding(.top, 8)
         .offset(x: max(-8, min(0, scrollOffsetY * 0.05)))
+    }
+    
+    private func getFavouriteArticle() -> ArticleSwiftDataModel? {
+        favouriteArticles.first { article in
+            guard let model = viewModel.articleModel as? ArticleDto else {
+                return false
+            }
+            return article.checkIfFavourite(modelToCompare: model)
+        }
+    }
+    
+    private func isFavourite() -> Bool {
+        getFavouriteArticle() != nil
     }
 }
 
 //MARK: - PREVIEW
 #Preview {
     ArticleDetailScreen(
-        viewModel: ArticleDetailViewModel(articleData: .mock)
+        viewModel: ArticleDetailViewModel(articleData: ArticleDto.mock)
     )
 }

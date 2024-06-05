@@ -77,6 +77,7 @@
 		021815552C106BBA00F39DB9 /* HomerServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218154F2C106BBA00F39DB9 /* HomerServerTests.swift */; };
 		02FDF8782C1072A500B450FC /* SettingsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8772C1072A500B450FC /* SettingsOptions.swift */; };
 		02FDF87C2C10796A00B450FC /* ArticleSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF87B2C10796A00B450FC /* ArticleSwiftDataModel.swift */; };
+		02FDF87F2C107AB600B450FC /* ArticleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF87E2C107AB500B450FC /* ArticleModelProtocol.swift */; };
 		0F09119B31A3807AEAA348EA /* Pods_ArticlePortfolioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,6 +164,7 @@
 		0218154F2C106BBA00F39DB9 /* HomerServerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomerServerTests.swift; sourceTree = "<group>"; };
 		02FDF8772C1072A500B450FC /* SettingsOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptions.swift; sourceTree = "<group>"; };
 		02FDF87B2C10796A00B450FC /* ArticleSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSwiftDataModel.swift; sourceTree = "<group>"; };
+		02FDF87E2C107AB500B450FC /* ArticleModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModelProtocol.swift; sourceTree = "<group>"; };
 		54B65206D2042925348EDE11 /* Pods-ArticlePortfolioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.release.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.release.xcconfig"; sourceTree = "<group>"; };
 		74661D37A0ABBEF684199368 /* Pods-ArticlePortfolioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.debug.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticlePortfolioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -358,6 +360,7 @@
 		021814842C105E4F00F39DB9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				02FDF87D2C107AB000B450FC /* Protocols */,
 				021814852C105E5700F39DB9 /* ArticleResponseDto.swift */,
 				021814872C105E6300F39DB9 /* ArticleDto.swift */,
 			);
@@ -755,6 +758,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		02FDF87D2C107AB000B450FC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF87E2C107AB500B450FC /* ArticleModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		6B6EF66AB2CFDD9E8980726D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -944,6 +955,7 @@
 				021815232C10651C00F39DB9 /* ArticleDetailModule.swift in Sources */,
 				021814EB2C1062BD00F39DB9 /* NavigationStore+ArticleDetailRouter.swift in Sources */,
 				021814EE2C1062BD00F39DB9 /* NavigationStore+SettingsScreenRouter.swift in Sources */,
+				02FDF87F2C107AB600B450FC /* ArticleModelProtocol.swift in Sources */,
 				021815152C1064B000F39DB9 /* ResolverProtocol.swift in Sources */,
 				021815342C10679D00F39DB9 /* SettingsScreen.swift in Sources */,
 				021814F42C1062BD00F39DB9 /* HomeScreenRouterLogic.swift in Sources */,

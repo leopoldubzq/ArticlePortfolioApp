@@ -65,7 +65,7 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
     private func getRoute(node: AnyHashable) -> HomeScreenRoute? {
         switch node {
         case is ArticleDetailNode:
-            return .articleDetails(model: .init())
+            return .articleDetails(model: ArticleDto.init())
         default:
             return nil
         }
