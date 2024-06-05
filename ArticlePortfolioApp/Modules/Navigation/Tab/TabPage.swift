@@ -26,7 +26,7 @@ enum TabPage: CaseIterable {
         case .home:
             HomeScreenNode()
         case .favourites:
-            ArticleDetailNode(articleData: ArticleDto.init())
+            FavouritesNode()
         }
     }
 }

@@ -1,11 +1,14 @@
 import SwiftUI
+import SwiftData
 
 struct HomeScreen<ViewModel: Home.ViewModel>: View {
     
     //MARK: - PRIVATE PROPERTIES
     @Environment(\.homeScreenRouter) private var router: HomeScreenRouterLogic
+    @Environment(\.modelContext) private var modelContext
     @StateObject private var viewModel: ViewModel
     @Namespace private var selectedQueryAnimation
+    @Query private var favouriteArticles: [ArticleSwiftDataModel]
     
     //MARK: - INITIALIZERS
     init(viewModel: ViewModel) {
@@ -18,9 +21,15 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
             ScrollView {
                 LazyVStack(spacing: 0) {
                     ForEach(viewModel.articles, id: \.self) { article in
-                        ArticleRowView(article: article) {
+                        ArticleRowView(article: article,
+                                       isFavourite: viewModel.isFavourite(model: article,
+                                                                          favouriteArticles: favouriteArticles),
+                                       onTapHeart: {
+                            viewModel.updateFavouriteState(with: modelContext, model: article,
+                                                           favouriteArticles: favouriteArticles)
+                        }, onTapRow: {
                             router.navigate(.articleDetails(model: article))
-                        }
+                        })
                         .frame(minHeight: 200)
                     }
                 }
@@ -61,7 +70,6 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
     }
     
     //MARK: - PRIVATE METHODS
-    
     private func getRoute(node: AnyHashable) -> HomeScreenRoute? {
         switch node {
         case is ArticleDetailNode:
@@ -71,6 +79,18 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
         }
     }
     
+    private func getFavouriteArticle(model: any ArticleModelProtocol) -> ArticleSwiftDataModel? {
+        favouriteArticles.first { article in
+            guard let model = model as? ArticleDto else {
+                return false
+            }
+            return article.checkIfFavourite(modelToCompare: model)
+        }
+    }
+    
+    private func isFavourite(model: any ArticleModelProtocol) -> Bool {
+        getFavouriteArticle(model: model) != nil
+    }
     
 }
 

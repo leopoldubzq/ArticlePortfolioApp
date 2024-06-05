@@ -1,6 +1,7 @@
 import Foundation
 
 struct ArticleDto: Codable, Hashable, ArticleModelProtocol {
+    var createdAt: Date = Date()
     var title: String?
     var articleDescription: String?
     var articleUrl: URL?

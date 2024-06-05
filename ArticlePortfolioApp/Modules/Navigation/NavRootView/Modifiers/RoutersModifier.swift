@@ -15,6 +15,6 @@ struct RoutersModifier: ViewModifier {
             .environment(\.homeScreenRouter, navigationStore)
             .environment(\.articleDetailRouter, navigationStore)
             .environment(\.settingsScreenRouter, navigationStore)
-        
+            .environment(\.favouritesRouter, navigationStore)
     }
 }

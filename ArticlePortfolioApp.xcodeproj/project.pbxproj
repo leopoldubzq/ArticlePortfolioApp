@@ -78,6 +78,15 @@
 		02FDF8782C1072A500B450FC /* SettingsOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8772C1072A500B450FC /* SettingsOptions.swift */; };
 		02FDF87C2C10796A00B450FC /* ArticleSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF87B2C10796A00B450FC /* ArticleSwiftDataModel.swift */; };
 		02FDF87F2C107AB600B450FC /* ArticleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF87E2C107AB500B450FC /* ArticleModelProtocol.swift */; };
+		02FDF8842C108C5000B450FC /* FavouritesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8832C108C5000B450FC /* FavouritesScreen.swift */; };
+		02FDF8862C108D4C00B450FC /* FavouritesScreenResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8852C108D4C00B450FC /* FavouritesScreenResolver.swift */; };
+		02FDF8882C108D8500B450FC /* FavouritesRouterLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8872C108D8500B450FC /* FavouritesRouterLogic.swift */; };
+		02FDF88A2C108DDB00B450FC /* FavouritesRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8892C108DDB00B450FC /* FavouritesRoute.swift */; };
+		02FDF88C2C108E4000B450FC /* NavigationStore+FavouritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF88B2C108E4000B450FC /* NavigationStore+FavouritesRouter.swift */; };
+		02FDF88E2C108E6000B450FC /* FavouritesNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF88D2C108E6000B450FC /* FavouritesNode.swift */; };
+		02FDF8912C108F7100B450FC /* FavouriteArticlesSortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8902C108F7100B450FC /* FavouriteArticlesSortType.swift */; };
+		02FDF8932C10900000B450FC /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8922C10900000B450FC /* FavouritesViewModel.swift */; };
+		02FDF8952C10902D00B450FC /* FavouritesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8942C10902D00B450FC /* FavouritesModule.swift */; };
 		0F09119B31A3807AEAA348EA /* Pods_ArticlePortfolioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +174,15 @@
 		02FDF8772C1072A500B450FC /* SettingsOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptions.swift; sourceTree = "<group>"; };
 		02FDF87B2C10796A00B450FC /* ArticleSwiftDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleSwiftDataModel.swift; sourceTree = "<group>"; };
 		02FDF87E2C107AB500B450FC /* ArticleModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModelProtocol.swift; sourceTree = "<group>"; };
+		02FDF8832C108C5000B450FC /* FavouritesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesScreen.swift; sourceTree = "<group>"; };
+		02FDF8852C108D4C00B450FC /* FavouritesScreenResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesScreenResolver.swift; sourceTree = "<group>"; };
+		02FDF8872C108D8500B450FC /* FavouritesRouterLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRouterLogic.swift; sourceTree = "<group>"; };
+		02FDF8892C108DDB00B450FC /* FavouritesRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRoute.swift; sourceTree = "<group>"; };
+		02FDF88B2C108E4000B450FC /* NavigationStore+FavouritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationStore+FavouritesRouter.swift"; sourceTree = "<group>"; };
+		02FDF88D2C108E6000B450FC /* FavouritesNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesNode.swift; sourceTree = "<group>"; };
+		02FDF8902C108F7100B450FC /* FavouriteArticlesSortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteArticlesSortType.swift; sourceTree = "<group>"; };
+		02FDF8922C10900000B450FC /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		02FDF8942C10902D00B450FC /* FavouritesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesModule.swift; sourceTree = "<group>"; };
 		54B65206D2042925348EDE11 /* Pods-ArticlePortfolioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.release.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.release.xcconfig"; sourceTree = "<group>"; };
 		74661D37A0ABBEF684199368 /* Pods-ArticlePortfolioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.debug.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticlePortfolioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +257,7 @@
 		0218146C2C105AE100F39DB9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				02FDF8802C108C3900B450FC /* Favourites */,
 				021815302C10679300F39DB9 /* Settings */,
 				0218151D2C1064F500F39DB9 /* ArticleDetail */,
 				021814962C10603000F39DB9 /* Home */,
@@ -275,6 +294,7 @@
 				021814AD2C10617F00F39DB9 /* HomeModule.swift */,
 				021815222C10651C00F39DB9 /* ArticleDetailModule.swift */,
 				021815352C1067AA00F39DB9 /* SettingsModule.swift */,
+				02FDF8942C10902D00B450FC /* FavouritesModule.swift */,
 			);
 			path = Definitions;
 			sourceTree = "<group>";
@@ -335,6 +355,7 @@
 		0218147B2C105DD400F39DB9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				02FDF88F2C108F6B00B450FC /* Sort */,
 				0218147C2C105DD600F39DB9 /* Logger */,
 			);
 			path = Helpers;
@@ -503,6 +524,7 @@
 				021814B52C1062BD00F39DB9 /* ContentNode.swift */,
 				021814B62C1062BD00F39DB9 /* HomeScreenNode.swift */,
 				021814B72C1062BD00F39DB9 /* SettingsScreenNode.swift */,
+				02FDF88D2C108E6000B450FC /* FavouritesNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -522,6 +544,7 @@
 				021814BF2C1062BD00F39DB9 /* NavigationStore+ArticleDetailRouter.swift */,
 				021814C12C1062BD00F39DB9 /* NavigationStore+HomescreenRouter.swift */,
 				021814C22C1062BD00F39DB9 /* NavigationStore+SettingsScreenRouter.swift */,
+				02FDF88B2C108E4000B450FC /* NavigationStore+FavouritesRouter.swift */,
 			);
 			path = NavigationStore;
 			sourceTree = "<group>";
@@ -540,6 +563,7 @@
 				021814C82C1062BD00F39DB9 /* ArticleDetailRouterLogic.swift */,
 				021814CA2C1062BD00F39DB9 /* HomeScreenRouterLogic.swift */,
 				021814CB2C1062BD00F39DB9 /* SettingsScreenRouterLogic.swift */,
+				02FDF8872C108D8500B450FC /* FavouritesRouterLogic.swift */,
 			);
 			path = RoutersLogic;
 			sourceTree = "<group>";
@@ -550,6 +574,7 @@
 				021814CF2C1062BD00F39DB9 /* ArticleDetailRoute.swift */,
 				021814D12C1062BD00F39DB9 /* HomeScreenRoute.swift */,
 				021814D22C1062BD00F39DB9 /* SettingsScreenRoute.swift */,
+				02FDF8892C108DDB00B450FC /* FavouritesRoute.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -637,6 +662,7 @@
 				0218150D2C1064B000F39DB9 /* ArticleDetailResolver.swift */,
 				0218150F2C1064B000F39DB9 /* HomeScreenResolver.swift */,
 				021815102C1064B000F39DB9 /* SettingsScreenResolver.swift */,
+				02FDF8852C108D4C00B450FC /* FavouritesScreenResolver.swift */,
 			);
 			path = Resolvers;
 			sourceTree = "<group>";
@@ -764,6 +790,39 @@
 				02FDF87E2C107AB500B450FC /* ArticleModelProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		02FDF8802C108C3900B450FC /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8822C108C4300B450FC /* ViewModel */,
+				02FDF8812C108C4100B450FC /* View */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		02FDF8812C108C4100B450FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8832C108C5000B450FC /* FavouritesScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		02FDF8822C108C4300B450FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8922C10900000B450FC /* FavouritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		02FDF88F2C108F6B00B450FC /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8902C108F7100B450FC /* FavouriteArticlesSortType.swift */,
+			);
+			path = Sort;
 			sourceTree = "<group>";
 		};
 		6B6EF66AB2CFDD9E8980726D /* Frameworks */ = {
@@ -927,6 +986,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FDF8932C10900000B450FC /* FavouritesViewModel.swift in Sources */,
 				021815002C1062BD00F39DB9 /* NavRootView.swift in Sources */,
 				021815292C10657500F39DB9 /* BlurView.swift in Sources */,
 				021814FF2C1062BD00F39DB9 /* RoutersModifier.swift in Sources */,
@@ -945,6 +1005,7 @@
 				021814802C105DE100F39DB9 /* CustomLogger.swift in Sources */,
 				021814882C105E6300F39DB9 /* ArticleDto.swift in Sources */,
 				0218152B2C10658000F39DB9 /* VisualEffectView.swift in Sources */,
+				02FDF8912C108F7100B450FC /* FavouriteArticlesSortType.swift in Sources */,
 				021815272C10656800F39DB9 /* OffsetObservingScrollView.swift in Sources */,
 				021814862C105E5700F39DB9 /* ArticleResponseDto.swift in Sources */,
 				021815192C1064B000F39DB9 /* SettingsScreenResolver.swift in Sources */,
@@ -954,11 +1015,13 @@
 				0218147E2C105DDA00F39DB9 /* LogLevel.swift in Sources */,
 				021815232C10651C00F39DB9 /* ArticleDetailModule.swift in Sources */,
 				021814EB2C1062BD00F39DB9 /* NavigationStore+ArticleDetailRouter.swift in Sources */,
+				02FDF8862C108D4C00B450FC /* FavouritesScreenResolver.swift in Sources */,
 				021814EE2C1062BD00F39DB9 /* NavigationStore+SettingsScreenRouter.swift in Sources */,
 				02FDF87F2C107AB600B450FC /* ArticleModelProtocol.swift in Sources */,
 				021815152C1064B000F39DB9 /* ResolverProtocol.swift in Sources */,
 				021815342C10679D00F39DB9 /* SettingsScreen.swift in Sources */,
 				021814F42C1062BD00F39DB9 /* HomeScreenRouterLogic.swift in Sources */,
+				02FDF8842C108C5000B450FC /* FavouritesScreen.swift in Sources */,
 				021814A52C1060AE00F39DB9 /* HomeScreen.swift in Sources */,
 				021814602C105A6100F39DB9 /* ContentView.swift in Sources */,
 				021814F12C1062BD00F39DB9 /* RouterProtocol.swift in Sources */,
@@ -968,6 +1031,7 @@
 				021814FB2C1062BD00F39DB9 /* SettingsScreenRoute.swift in Sources */,
 				021814B12C10622A00F39DB9 /* Loader.swift in Sources */,
 				0218148C2C105EC300F39DB9 /* HomeAPI.swift in Sources */,
+				02FDF8952C10902D00B450FC /* FavouritesModule.swift in Sources */,
 				021814E92C1062BD00F39DB9 /* ContentSizeCoordinator.swift in Sources */,
 				021814AE2C10617F00F39DB9 /* HomeModule.swift in Sources */,
 				021814902C105F2100F39DB9 /* HomeServer.swift in Sources */,
@@ -978,13 +1042,17 @@
 				021815162C1064B000F39DB9 /* ArticleDetailResolver.swift in Sources */,
 				021814732C105D4600F39DB9 /* StatusCode.swift in Sources */,
 				0218153C2C1069D200F39DB9 /* HiddenNavBarView.swift in Sources */,
+				02FDF88E2C108E6000B450FC /* FavouritesNode.swift in Sources */,
 				021814832C105E1D00F39DB9 /* APIEnvironment.swift in Sources */,
 				021815362C1067AA00F39DB9 /* SettingsModule.swift in Sources */,
 				021815382C1067BE00F39DB9 /* SettingsViewModel.swift in Sources */,
+				02FDF88C2C108E4000B450FC /* NavigationStore+FavouritesRouter.swift in Sources */,
 				021814A92C10610600F39DB9 /* Publisher+Ext.swift in Sources */,
 				021814ED2C1062BD00F39DB9 /* NavigationStore+HomescreenRouter.swift in Sources */,
+				02FDF8882C108D8500B450FC /* FavouritesRouterLogic.swift in Sources */,
 				021814F82C1062BD00F39DB9 /* ArticleDetailRoute.swift in Sources */,
 				021814EA2C1062BD00F39DB9 /* NavigationStore.swift in Sources */,
+				02FDF88A2C108DDB00B450FC /* FavouritesRoute.swift in Sources */,
 				021815252C10653A00F39DB9 /* ArticleDetailScreen.swift in Sources */,
 				0218152D2C1065D800F39DB9 /* Color+Ext.swift in Sources */,
 				021815212C1064FF00F39DB9 /* ArticleDetailViewModel.swift in Sources */,

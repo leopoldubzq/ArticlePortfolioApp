@@ -23,7 +23,7 @@ class ArticleSwiftDataModel: Identifiable, Equatable, ArticleModelProtocol {
                    articleUrl: articleUrl, imageUrl: imageUrl)
     }
     
-    func checkIfFavourite(modelToCompare model: ArticleDto) -> Bool {
+    func checkIfFavourite(modelToCompare model: any ArticleModelProtocol) -> Bool {
         title == model.title &&
         articleDescription == model.articleDescription &&
         articleUrl == model.articleUrl &&

@@ -48,7 +48,9 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
                                 BackButton()
                                 Spacer()
                                 Button { 
-                                    viewModel.updateFavouriteState(with: modelContext)
+                                    viewModel.updateFavouriteState(with: modelContext, 
+                                                                   model: viewModel.articleModel,
+                                                                   favouriteArticles: favouriteArticles)
                                 } label: {
                                     Image(systemName: isFavourite() ? "heart.fill" : "heart")
                                         .resizable()
@@ -65,9 +67,6 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
                 }
                 .ignoresSafeArea()
             }
-        }
-        .onLoad {
-            viewModel.fetchFavouriteArticlesFromDB(with: modelContext)
         }
     }
     

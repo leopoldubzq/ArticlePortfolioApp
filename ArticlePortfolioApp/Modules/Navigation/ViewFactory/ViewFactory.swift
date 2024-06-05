@@ -49,6 +49,8 @@ struct ViewFactoryModifier: ViewModifier {
             ArticleDetailResolver().resolveView(articleNode: node)
         case is SettingsScreenNode:
             SettingsScreenResolver().resolveView(with: dependencies)
+        case is FavouritesNode:
+            FavouritesScreenResolver().resolveView()
         default:
             Text("Error: No Destination")
         }

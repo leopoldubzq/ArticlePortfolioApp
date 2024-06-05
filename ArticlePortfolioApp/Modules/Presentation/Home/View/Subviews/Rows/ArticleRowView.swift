@@ -3,11 +3,22 @@ import Kingfisher
 
 struct ArticleRowView: View {
     
-    var article: ArticleDto
+    var article: any ArticleModelProtocol
+    var isFavourite: Bool
     var onTapRow: VoidCallback
+    var onTapHeart: VoidCallback?
+    var onTapTrash: VoidCallback?
+    @Environment(\.modelContext) private var modelContext
     
-    init(article: ArticleDto, onTapRow: @escaping VoidCallback) {
+    init(article: any ArticleModelProtocol,
+         isFavourite: Bool = false,
+         onTapHeart: VoidCallback? = nil,
+         onTapTrash: VoidCallback? = nil,
+         onTapRow: @escaping VoidCallback) {
         self.article = article
+        self.isFavourite = isFavourite
+        self.onTapHeart = onTapHeart
+        self.onTapTrash = onTapTrash
         self.onTapRow = onTapRow
     }
     
@@ -16,6 +27,25 @@ struct ArticleRowView: View {
     var body: some View {
         Button { onTapRow() } label: {
             VStack(alignment: .leading) {
+                if let _ = article as? ArticleSwiftDataModel {
+                    HStack {
+                        Spacer()
+                        Menu {
+                            Button("Remove from favourites", role: .destructive) {
+                                onTapTrash?()
+                            }
+                        } label: {
+                            Image(systemName: "ellipsis")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 18, height: 18)
+                        }
+                        .tint(.primary)
+                        .fontWeight(.semibold)
+                        .frame(maxHeight: .infinity)
+                    }
+                    .frame(height: 35)
+                }
                 KFImage(article.imageUrl)
                     .resizable()
                     .fade(duration: 0.35)
@@ -28,11 +58,35 @@ struct ArticleRowView: View {
                     .clipShape(
                         RoundedRectangle(cornerRadius: 8)
                     )
-                    
+                
                 Text(article.title ?? "")
                     .font(.system(size: 18, weight: .bold))
                     .multilineTextAlignment(.leading)
-                    
+                if let _ = article as? ArticleDto {
+                    HStack {
+                        Group {
+                            Button { onTapHeart?() } label: {
+                                Image(systemName: isFavourite ? "heart.fill" : "heart")
+                                    .contentTransition(.symbolEffect(.replace))
+                            }
+                            .tint(.primary)
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                            .tint(.primary)
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }
+                    .frame(height: 25)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 8)
+                    .background(
+                        Capsule()
+                            .fill(Color.init(uiColor: .secondarySystemBackground))
+                    )
+                }
             }
             .padding([.horizontal, .top])
             .frame(maxWidth: .infinity,
@@ -45,5 +99,5 @@ struct ArticleRowView: View {
 }
 
 #Preview {
-    ArticleRowView(article: .mock) {}
+    ArticleRowView(article: ArticleDto.mock, isFavourite: true) {}
 }

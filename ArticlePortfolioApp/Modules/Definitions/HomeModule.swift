@@ -1,4 +1,4 @@
 enum Home {
-    typealias ViewModel = HomeViewModelProtocol & BaseViewModel
+    typealias ViewModel = HomeViewModelProtocol & FavouriteArticlesProtocol & BaseViewModel
 }
 
