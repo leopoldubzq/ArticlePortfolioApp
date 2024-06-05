@@ -1,11 +1,5 @@
 # Article Portfolio App
 
-![Platform](https://img.shields.io/badge/platform-iOS-blue)
-![Swift](https://img.shields.io/badge/swift-5.0-orange)
-![SwiftUI](https://img.shields.io/badge/swiftUI-2.0-green)
-![MVVM](https://img.shields.io/badge/architecture-MVVM-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
-
 ## Description
 **Article Portfolio App** is a mobile iOS application designed to display technology-related articles. By default, the app shows top headlines, but users can search for specific tech articles using queries like "Jeff Bezos" or "Apple". Users can also add specific articles to their favorites and view them in a dedicated "Favorites" tab. The app is built using SwiftUI with a clean MVVM architecture, utilizing Combine and the Moya framework. The project also includes unit tests with mock servers.
 
