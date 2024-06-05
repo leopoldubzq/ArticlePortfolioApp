@@ -20,7 +20,7 @@ final class HomeViewModelTests: XCTestCase {
     }
     
     func initializeSutWithServerProvider(statusCode: StatusCode) {
-        sut = HomeViewModel(homeServer: HomeServer(provider: .getMockProvider(withStatusCode: statusCode)))
+        sut = HomeViewModel(homeDomainManager: HomeDomainManager(statusCode: statusCode))
     }
     
     func testArticlesSuccessNotEmpty() {

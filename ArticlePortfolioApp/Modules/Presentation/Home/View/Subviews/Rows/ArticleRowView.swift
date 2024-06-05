@@ -64,20 +64,18 @@ struct ArticleRowView: View {
                     .multilineTextAlignment(.leading)
                 if let _ = article as? ArticleDto {
                     HStack {
-                        Group {
-                            Button { onTapHeart?() } label: {
+                        Button { onTapHeart?() } label: {
+                            HStack {
+                                if isFavourite {
+                                    Text("Add to favourites")
+                                } else {
+                                    Text("Remove from favourites")
+                                }
                                 Image(systemName: isFavourite ? "heart.fill" : "heart")
-                                    .contentTransition(.symbolEffect(.replace))
                             }
-                            .tint(.primary)
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "trash")
-                            }
-                            .tint(.primary)
                         }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .tint(.primary)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                     }
                     .frame(height: 25)
                     .frame(maxWidth: .infinity)

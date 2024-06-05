@@ -1,9 +1,13 @@
 import SwiftUI
 
 class DependenciesFactory: ObservableObject {
-    let homerServer: HomeServer
+    let everythingServer: EverythingServerProtocol
+    let topHeadlinesServer: TopHeadlinesServerProtocol
+    let homeDomainManager: HomeDomainManagerProtocol
     
     init() {
-        homerServer = HomeServer()
+        everythingServer = EverythingServer()
+        topHeadlinesServer = TopHeadlinesServer()
+        homeDomainManager = HomeDomainManager(everythingServer: everythingServer, topHeadlinesServer: topHeadlinesServer)
     }
 }

@@ -10,22 +10,22 @@ protocol HomeViewModelProtocol: ObservableObject {
 
 extension HomeViewModelProtocol {
     func fetchArticles(with query: String = "") {
-        fetchArticles(with: "apple")
+        fetchArticles(with: "")
     }
 }
 
 final class HomeViewModel: Home.ViewModel {
     
     //MARK: - PRIVATE PROPERTIES
-    private let homeService: HomeServerProtocol
+    private let homeDomainManager: HomeDomainManagerProtocol
     
     //MARK: - PUBLIC PROPERTIES
     @Published var articles: [ArticleDto] = []
     @Published var searchPhrase: String = ""
     
     //MARK: - INITIALIZER
-    init(homeServer: HomeServerProtocol) {
-        self.homeService = homeServer
+    init(homeDomainManager: HomeDomainManagerProtocol) {
+        self.homeDomainManager = homeDomainManager
         super.init()
         observeSearchPhrase()
     }
@@ -46,17 +46,12 @@ final class HomeViewModel: Home.ViewModel {
     
     //MARK: - PRIVATE METHODS
     private func articlesPublisher(query: String) -> AnyPublisher<[ArticleDto], Never> {
-        homeService
+        homeDomainManager
             .fetchArticles(withQuery: query)
-            .subscribe(on: DispatchQueue.global(qos: .utility))
-            .receive(on: RunLoop.main)
-            .map { articleResponse -> [ArticleDto] in
-                return articleResponse.articles.filter { $0.imageUrl != nil  }
-            }
+            .map { $0.filter { $0.imageUrl != nil } }
             .handleLoadingEvents(with: self)
             .catch { error -> AnyPublisher<[ArticleDto], Never> in
-//                ToastManager.shared.showToastInTheQueue(with: "Coś poszło nie tak", type: .error)
-                return Just([]).eraseToAnyPublisher()
+                Just([]).eraseToAnyPublisher()
             }
             .eraseToAnyPublisher()
     }
@@ -66,9 +61,6 @@ final class HomeViewModel: Home.ViewModel {
             .removeDuplicates()
             .dropFirst()
             .customDebounce(forSeconds: 0.5)
-            .map { query in
-                query.isEmpty ? "apple" : query
-            }
             .map { [unowned self] query in
                 articlesPublisher(query: query)
             }

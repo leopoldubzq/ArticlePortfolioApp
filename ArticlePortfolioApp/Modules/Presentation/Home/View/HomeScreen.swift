@@ -97,7 +97,8 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
 //MARK: - PREVIEW
 #Preview {
     NavigationStack {
-        HomeScreen(viewModel: HomeViewModel(homeServer: HomeServer()))
+        HomeScreen(viewModel: HomeViewModel(homeDomainManager: HomeDomainManager(everythingServer: EverythingServer(),
+                                                                                 topHeadlinesServer: TopHeadlinesServer())))
             .environment(\.homeScreenRouter, NavigationStore(rootNode: HomeScreenNode(), parentNavigationStore: nil))
     }
 }

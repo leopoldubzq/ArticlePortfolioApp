@@ -1,10 +1,10 @@
 import Moya
 
-enum HomeAPI {
+enum EverythingAPI {
     case everything(String)
 }
 
-extension HomeAPI: TargetType {
+extension EverythingAPI: TargetType {
     var baseURL: URL {
         URL(string: APIEnvironment.baseUrl)!
     }

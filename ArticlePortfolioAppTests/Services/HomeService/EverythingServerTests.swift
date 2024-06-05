@@ -3,16 +3,16 @@ import XCTest
 import Combine
 import Moya
 
-final class HomerServerTests: XCTestCase {
+final class EverythingServerTests: XCTestCase {
     
     var cancellables: Set<AnyCancellable>!
-    var homeServer: HomeServerProtocol!
+    var everythingServer: EverythingServer!
     var searchPhrase: String!
     var errorStatusCode: Int!
     
     override func tearDown() {
         cancellables = nil
-        homeServer = nil
+        everythingServer = nil
         searchPhrase = nil
         errorStatusCode = nil
         super.tearDown()
@@ -24,7 +24,7 @@ final class HomerServerTests: XCTestCase {
     }
     
     private func initializeServerWithStatusCode(_ statusCode: StatusCode) {
-        homeServer = HomeServer(provider: .getMockProvider(withStatusCode: statusCode))
+        everythingServer = EverythingServer(provider: .getMockProvider(withStatusCode: statusCode))
     }
     
     func testFetchArticlesFailure() {
@@ -39,7 +39,7 @@ final class HomerServerTests: XCTestCase {
         //Then
         let expectation = expectation(description: #function)
         
-        homeServer
+        everythingServer
             .fetchArticles(withQuery: TestSearchPhrases.apple.rawValue)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] result in
@@ -69,7 +69,7 @@ final class HomerServerTests: XCTestCase {
         //Then
         let expectation = expectation(description: #function)
         
-        homeServer
+        everythingServer
             .fetchArticles(withQuery: TestSearchPhrases.apple.rawValue)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] result in
