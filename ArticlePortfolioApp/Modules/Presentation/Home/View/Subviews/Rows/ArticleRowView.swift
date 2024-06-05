@@ -95,6 +95,12 @@ struct ArticleRowView: View {
         }
         .buttonStyle(ScalableButtonStyle())
         .tint(.primary)
+        .scrollTransition { content, phase in
+            content
+                .scaleEffect(phase.isIdentity ? 1 : 0.94)
+                .opacity(phase.isIdentity ? 1 : 0.4)
+                .blur(radius: phase.isIdentity ? 0 : 1)
+        }
     }
 }
 
