@@ -1,10 +1,3 @@
-//
-//  ArticleDetailRouterLogic.swift
-//  SwiftUINavigationDemo
-//
-//  Created by Roman on 21/05/2024.
-//
-
 import SwiftUI
 
 protocol ArticleDetailRouterLogic: AnyObject {

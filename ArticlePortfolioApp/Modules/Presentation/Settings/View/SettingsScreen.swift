@@ -1,10 +1,3 @@
-//
-//  SettingsScreen.swift
-//  SwiftUINavigationDemo
-//
-//  Created by Leopold Romanowski on 23/05/2024.
-//
-
 import SwiftUI
 
 enum SettingsOptions {
