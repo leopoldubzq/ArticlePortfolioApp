@@ -14,7 +14,7 @@
 - Utilizes Combine and Moya framework
 - Unit tests with mock servers
 
-## Features
+## Usage
 Upon launching the app, you will see the top tech headlines by default. To search for specific articles:
 
 1. **Tap on the search bar.**
