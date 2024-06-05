@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (5.9.1)
+  - Kingfisher (7.11.0)
+  - Moya/Combine (15.0.0):
+    - Moya/Core
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - SwiftUI-Shimmer (1.4.0)
+
+DEPENDENCIES:
+  - Kingfisher (= 7.11.0)
+  - Moya/Combine (= 15.0.0)
+  - SwiftUI-Shimmer (from `https://github.com/markiv/SwiftUI-Shimmer.git`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - Moya
+
+EXTERNAL SOURCES:
+  SwiftUI-Shimmer:
+    :git: https://github.com/markiv/SwiftUI-Shimmer.git
+
+CHECKOUT OPTIONS:
+  SwiftUI-Shimmer:
+    :commit: 0226e21f9bf355d40e07e5f5e1c33679d50e167f
+    :git: https://github.com/markiv/SwiftUI-Shimmer.git
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  SwiftUI-Shimmer: 26954ba07da310a50e24a3e54ce5684951ebbc17
+
+PODFILE CHECKSUM: 5abcf625112e3c95291399985f7899128790d4f3
+
+COCOAPODS: 1.15.2
