@@ -24,16 +24,16 @@
 
 ## iOS
 <div style="display: flex; flex-direction: row;">
-   <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/b5b457b3-3321-480d-a663-6d6ad0034b0f" width="300"/>
-   <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/d36c5f5d-f996-4a77-960c-8a88a4ad8fe3" width="300"/>
-   <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/f614572e-f574-448f-9df9-78782bd6b3bc" width="300"/>
+   <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/b5b457b3-3321-480d-a663-6d6ad0034b0f" width="250"/>
+   <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/d36c5f5d-f996-4a77-960c-8a88a4ad8fe3" width="250"/>
+   <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/f614572e-f574-448f-9df9-78782bd6b3bc" width="250"/>
 </div>
 
 ## watchOS
 <div style="display: flex; flex-direction: row;">
-  <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/8728fded-aa53-411f-9048-b835832d367d" width="300"/>
-  <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/f22c8bec-476e-4e3e-966d-3649d1ce136a)" width="300"/>
-  <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/a90fb438-599e-4d35-9b6b-aef01681a8c5" width="300"/>
+  <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/8728fded-aa53-411f-9048-b835832d367d" width="250"/>
+  <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/f22c8bec-476e-4e3e-966d-3649d1ce136a)" width="250"/>
+  <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/a90fb438-599e-4d35-9b6b-aef01681a8c5" width="250"/>
 </div>
 
 ## Usage
