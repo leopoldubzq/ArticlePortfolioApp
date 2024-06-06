@@ -6,6 +6,7 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
     
     //MARK: - PRIVATE PROPERTIES
     @Environment(\.articleDetailRouter) private var router: ArticleDetailRouterLogic
+    @Environment(\.colorScheme) private var colorScheme
     @StateObject private var viewModel: ViewModel
     @State private var scrollOffsetY: CGFloat = .zero
     @State private var isBarHidden = false
@@ -91,20 +92,19 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
                     Rectangle()
                         .fill(
                             .linearGradient(colors: [
-                                Color(uiColor: .systemBackground).opacity(0.7),
-                                Color(uiColor: .systemBackground).opacity(0.6),
-                                Color(uiColor: .systemBackground).opacity(0.5),
-                                Color(uiColor: .systemBackground).opacity(0.2),
-                                Color(uiColor: .systemBackground).opacity(0.1),
-                                Color(uiColor: .systemBackground).opacity(0.05),
-                                Color(uiColor: .systemBackground).opacity(0.01)
+                                Color(uiColor: .black).opacity(0.7),
+                                Color(uiColor: .black).opacity(0.6),
+                                Color(uiColor: .black).opacity(0.5),
+                                Color(uiColor: .black).opacity(0.2),
+                                Color(uiColor: .black).opacity(0.1),
+                                Color(uiColor: .black).opacity(0.05),
+                                Color(uiColor: .black).opacity(0.01)
                             ], startPoint: .top, endPoint: .center)
                         )
                 }
                 .offset(y: min(0, -scrollOffsetY))
         }
         .frame(height: 450)
-        
     }
     
     @ViewBuilder
@@ -114,27 +114,20 @@ struct ArticleDetailScreen<ViewModel: ArticleDetail.ViewModel>: View {
                 .padding(15)
                 .background(
                     Circle()
-                        .fill(Color.customDarkGray)
+                        .fill(colorScheme == .dark ? Color.customDarkGray : Color.white)
                         .opacity(1 - -scrollOffsetY * 0.03)
                 )
-                .foregroundStyle(.white)
+                .foregroundStyle((scrollOffsetY < -25 && colorScheme == .light) ? .white : .black)
+                .animation(.easeInOut(duration: 0.2), value: scrollOffsetY)
                 .fontWeight(.semibold)
                 .scaleEffect(1 + min(0.2, max(0, -scrollOffsetY * 0.005)))
         }
         .offset(x: max(-8, min(0, scrollOffsetY * 0.05)))
     }
     
-    private func getFavouriteArticle() -> ArticleSwiftDataModel? {
-        favouriteArticles.first { article in
-            guard let model = viewModel.articleModel as? ArticleDto else {
-                return false
-            }
-            return article.checkIfFavourite(modelToCompare: model)
-        }
-    }
-    
     private func isFavourite() -> Bool {
-        getFavouriteArticle() != nil
+        viewModel.isFavourite(model: viewModel.articleModel,
+                                                favouriteArticles: favouriteArticles)
     }
 }
 

@@ -25,7 +25,7 @@ extension View {
     func setupTab(_ tab: TabPage) -> some View {
         self
             .tag(tab)
-            .toolbarBackground(.background, for: .tabBar)
+            .toolbarBackground(Color.init(uiColor: .systemBackground), for: .tabBar)
             .tabItem {
                 Image(systemName: tab.imageName)
                 Text(tab.title)

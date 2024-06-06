@@ -5,6 +5,7 @@ import SwiftData
 struct ArticlePortfolioAppApp: App {
     //MARK: - PRIVATE PROPERTIES
     @ObservedObject private var dependencies = DependenciesFactory()
+    @ObservedObject private var watchConnectivity = WatchConnectivityManager.shared
     @StateObject private var parentNavigationStore = NavigationStore(rootNode: ContentNode(),
                                                                      parentNavigationStore: nil)
     @State private var selectedTab: TabPage = .home
@@ -15,6 +16,7 @@ struct ArticlePortfolioAppApp: App {
             GeometryReader { proxy in
                 ContentView(selectedTab: $selectedTab)
                     .environmentObject(dependencies)
+                    .environmentObject(watchConnectivity)
                     .fullScreenCover(isPresented: .init(
                         get: { parentNavigationStore.childFullScreenNavigationStore != nil },
                         set: { _ in parentNavigationStore.childFullScreenNavigationStore = nil }),

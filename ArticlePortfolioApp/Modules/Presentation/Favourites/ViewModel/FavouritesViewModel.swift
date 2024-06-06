@@ -1,14 +1,12 @@
 import SwiftUI
+import SwiftData
 
 protocol FavouritesViewModelProtocol: ObservableObject {
     var selectedSortOption: String { get set }
     func sorted(_ article1: any ArticleModelProtocol, _ article2: any ArticleModelProtocol) -> Bool
 }
 
-final class FavouritesViewModel: Favourites.ViewModel {
-    @AppStorage("selectedExpensesSortOption")
-    var selectedSortOption: String = FavouriteArticlesSortType.createdAt.rawValue
-    
+extension FavouritesViewModelProtocol {
     func sorted(_ article1: any ArticleModelProtocol, _ article2: any ArticleModelProtocol) -> Bool {
         switch selectedSortOption {
         case FavouriteArticlesSortType.createdAt.rawValue:
@@ -21,4 +19,9 @@ final class FavouritesViewModel: Favourites.ViewModel {
             return article1.createdAt > article2.createdAt
         }
     }
+}
+
+final class FavouritesViewModel: Favourites.ViewModel {
+    @AppStorage("selectedExpensesSortOption")
+    var selectedSortOption: String = FavouriteArticlesSortType.createdAt.rawValue
 }

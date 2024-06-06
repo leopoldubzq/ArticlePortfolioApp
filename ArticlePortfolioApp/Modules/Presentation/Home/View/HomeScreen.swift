@@ -6,6 +6,7 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
     //MARK: - PRIVATE PROPERTIES
     @Environment(\.homeScreenRouter) private var router: HomeScreenRouterLogic
     @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject private var watchConnectivity: WatchConnectivityManager
     @StateObject private var viewModel: ViewModel
     @Namespace private var selectedQueryAnimation
     @Query private var favouriteArticles: [ArticleSwiftDataModel]
@@ -53,6 +54,19 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
                     .scaleEffect(viewModel.isLoading ? 1 : 0.9)
                     .animation(.easeInOut(duration: 0.15), value: viewModel.isLoading)
             }
+            .task(id: favouriteArticles) {
+                sendFavouriteArticlesArrayToAppleWatch()
+            }
+            .onChange(of: watchConnectivity.notificationMessage) { _, notification in
+                guard let notification, let model = notification.model else { return }
+                switch notification.type {
+                case .favouriteArticleModel:
+                    viewModel.updateFavouriteState(with: modelContext, model: model,
+                                                   favouriteArticles: favouriteArticles)
+                default:
+                    break
+                }
+            }
         }
         .onLoad {
             viewModel.fetchArticles()
@@ -60,7 +74,6 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
     }
     
     //MARK: - VIEW BUILDERS
-    
     @ViewBuilder
     private func SettingsButton(onTap: @escaping VoidCallback) -> some View {
         Button { onTap() } label: {
@@ -70,6 +83,13 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
     }
     
     //MARK: - PRIVATE METHODS
+    private func sendFavouriteArticlesArrayToAppleWatch() {
+        let articlesToSend = favouriteArticles
+            .map { $0.convertToArticleDto() }
+            .encoded
+        WatchConnectivityManager.shared.send(articlesToSend, type: .favouriteArticlesList)
+    }
+    
     private func getRoute(node: AnyHashable) -> HomeScreenRoute? {
         switch node {
         case is ArticleDetailNode:
@@ -100,5 +120,8 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
         HomeScreen(viewModel: HomeViewModel(homeDomainManager: HomeDomainManager(everythingServer: EverythingServer(),
                                                                                  topHeadlinesServer: TopHeadlinesServer())))
             .environment(\.homeScreenRouter, NavigationStore(rootNode: HomeScreenNode(), parentNavigationStore: nil))
+            .environmentObject(WatchConnectivityManager.shared)
     }
 }
+
+

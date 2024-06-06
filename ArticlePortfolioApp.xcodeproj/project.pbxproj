@@ -19,7 +19,7 @@
 		021814832C105E1D00F39DB9 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814822C105E1D00F39DB9 /* APIEnvironment.swift */; };
 		021814862C105E5700F39DB9 /* ArticleResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814852C105E5700F39DB9 /* ArticleResponseDto.swift */; };
 		021814882C105E6300F39DB9 /* ArticleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814872C105E6300F39DB9 /* ArticleDto.swift */; };
-		0218148C2C105EC300F39DB9 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148B2C105EC300F39DB9 /* HomeAPI.swift */; };
+		0218148C2C105EC300F39DB9 /* EverythingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148B2C105EC300F39DB9 /* EverythingAPI.swift */; };
 		0218148E2C105EDF00F39DB9 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148D2C105EDF00F39DB9 /* String+Ext.swift */; };
 		021814902C105F2100F39DB9 /* EverythingServerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148F2C105F2100F39DB9 /* EverythingServerProtocol.swift */; };
 		021814922C105F4800F39DB9 /* MoyaProvider+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814912C105F4800F39DB9 /* MoyaProvider+Ext.swift */; };
@@ -90,7 +90,48 @@
 		02FDF8982C10AA8000B450FC /* TopHeadlinesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8972C10AA8000B450FC /* TopHeadlinesAPI.swift */; };
 		02FDF89A2C10AAF100B450FC /* TopHeadlinesServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8992C10AAF100B450FC /* TopHeadlinesServer.swift */; };
 		02FDF89E2C10ABB300B450FC /* HomeDomainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF89D2C10ABB300B450FC /* HomeDomainManager.swift */; };
+		02FDF8A62C11164300B450FC /* ArticlePortfolioWatchAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8A52C11164300B450FC /* ArticlePortfolioWatchAppApp.swift */; };
+		02FDF8A82C11164300B450FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8A72C11164300B450FC /* ContentView.swift */; };
+		02FDF8AA2C11164400B450FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FDF8A92C11164400B450FC /* Assets.xcassets */; };
+		02FDF8AD2C11164400B450FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FDF8AC2C11164400B450FC /* Preview Assets.xcassets */; };
+		02FDF8B02C11164400B450FC /* ArticlePortfolioWatchApp Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 02FDF8A32C11164300B450FC /* ArticlePortfolioWatchApp Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		02FDF8C32C11181700B450FC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8C22C11181700B450FC /* HomeView.swift */; };
+		02FDF8C82C11185500B450FC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8C72C11185500B450FC /* HomeViewModel.swift */; };
+		02FDF8C92C11188900B450FC /* HomeDomainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF89D2C10ABB300B450FC /* HomeDomainManager.swift */; };
+		02FDF8CA2C1118C500B450FC /* ArticleDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814872C105E6300F39DB9 /* ArticleDto.swift */; };
+		02FDF8CB2C1118C900B450FC /* ArticleResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814852C105E5700F39DB9 /* ArticleResponseDto.swift */; };
+		02FDF8CC2C1118D100B450FC /* ArticleModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF87E2C107AB500B450FC /* ArticleModelProtocol.swift */; };
+		02FDF8CD2C11192900B450FC /* Publisher+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814A82C10610600F39DB9 /* Publisher+Ext.swift */; };
+		02FDF8CE2C11194800B450FC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814AB2C10612D00F39DB9 /* BaseViewModel.swift */; };
+		02FDF8CF2C1119C600B450FC /* EverythingServerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148F2C105F2100F39DB9 /* EverythingServerProtocol.swift */; };
+		02FDF8D02C1119CC00B450FC /* TopHeadlinesServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8992C10AAF100B450FC /* TopHeadlinesServer.swift */; };
+		02FDF8D12C111A1700B450FC /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814722C105D4600F39DB9 /* StatusCode.swift */; };
+		02FDF8D22C111A1C00B450FC /* MoyaProvider+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814912C105F4800F39DB9 /* MoyaProvider+Ext.swift */; };
+		02FDF8D32C111A2300B450FC /* TopHeadlinesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8972C10AA8000B450FC /* TopHeadlinesAPI.swift */; };
+		02FDF8D42C111A2800B450FC /* EverythingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148B2C105EC300F39DB9 /* EverythingAPI.swift */; };
+		02FDF8D52C111A3300B450FC /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218148D2C105EDF00F39DB9 /* String+Ext.swift */; };
+		02FDF8D62C111A3800B450FC /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814822C105E1D00F39DB9 /* APIEnvironment.swift */; };
+		02FDF8D72C111A4000B450FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814942C105F5D00F39DB9 /* Constants.swift */; };
+		02FDF8D82C111A4700B450FC /* LoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814752C105D9700F39DB9 /* LoggerPlugin.swift */; };
+		02FDF8D92C111A5400B450FC /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814792C105DB100F39DB9 /* DateFormatter+Ext.swift */; };
+		02FDF8DA2C111A5A00B450FC /* CustomLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218147F2C105DE100F39DB9 /* CustomLogger.swift */; };
+		02FDF8DB2C111A6900B450FC /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218147D2C105DDA00F39DB9 /* LogLevel.swift */; };
+		02FDF8DC2C111AA400B450FC /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0218152E2C10668F00F39DB9 /* ViewDidLoadModifier.swift */; };
+		02FDF8E02C111CF700B450FC /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8DF2C111CF700B450FC /* WatchConnectivityManager.swift */; };
+		02FDF8E12C111CF700B450FC /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8DF2C111CF700B450FC /* WatchConnectivityManager.swift */; };
+		02FDF8E22C111D3500B450FC /* ArticleSwiftDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF87B2C10796A00B450FC /* ArticleSwiftDataModel.swift */; };
+		02FDF8E62C111E3900B450FC /* ArticleOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8E42C111E3900B450FC /* ArticleOptionsView.swift */; };
+		02FDF8EA2C11230400B450FC /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8E82C11230400B450FC /* FavouritesView.swift */; };
+		02FDF8EE2C11232A00B450FC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8EC2C11232A00B450FC /* MainView.swift */; };
+		02FDF8F42C11237000B450FC /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8F22C11237000B450FC /* FavouritesViewModel.swift */; };
+		02FDF8F82C1124D400B450FC /* ArticleRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF8F72C1124D400B450FC /* ArticleRowView.swift */; };
+		02FDF9142C11E79300B450FC /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF9132C11E79300B450FC /* Array+Ext.swift */; };
+		02FDF9192C11E8E000B450FC /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF9162C11E7B900B450FC /* Data+Ext.swift */; };
+		02FDF91A2C11E8EA00B450FC /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF9162C11E7B900B450FC /* Data+Ext.swift */; };
+		02FDF91C2C11FD0B00B450FC /* ArticleOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF91B2C11FD0B00B450FC /* ArticleOptionsViewModel.swift */; };
+		02FDF91E2C12039C00B450FC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF91D2C12039C00B450FC /* MainViewModel.swift */; };
 		0F09119B31A3807AEAA348EA /* Pods_ArticlePortfolioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */; };
+		73A55E4801867F897FB220B2 /* Pods_ArticlePortfolioWatchApp_Watch_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764A23EC1AB3A6C193EB5876 /* Pods_ArticlePortfolioWatchApp_Watch_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +142,28 @@
 			remoteGlobalIDString = 021814592C105A6100F39DB9;
 			remoteInfo = ArticlePortfolioApp;
 		};
+		02FDF8AE2C11164400B450FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 021814522C105A6100F39DB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02FDF8A22C11164300B450FC;
+			remoteInfo = "ArticlePortfolioWatchApp Watch App";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		02FDF8B42C11164400B450FC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				02FDF8B02C11164400B450FC /* ArticlePortfolioWatchApp Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0218145A2C105A6100F39DB9 /* ArticlePortfolioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArticlePortfolioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +179,7 @@
 		021814822C105E1D00F39DB9 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		021814852C105E5700F39DB9 /* ArticleResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponseDto.swift; sourceTree = "<group>"; };
 		021814872C105E6300F39DB9 /* ArticleDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDto.swift; sourceTree = "<group>"; };
-		0218148B2C105EC300F39DB9 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
+		0218148B2C105EC300F39DB9 /* EverythingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingAPI.swift; sourceTree = "<group>"; };
 		0218148D2C105EDF00F39DB9 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		0218148F2C105F2100F39DB9 /* EverythingServerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingServerProtocol.swift; sourceTree = "<group>"; };
 		021814912C105F4800F39DB9 /* MoyaProvider+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Ext.swift"; sourceTree = "<group>"; };
@@ -189,9 +251,30 @@
 		02FDF8972C10AA8000B450FC /* TopHeadlinesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesAPI.swift; sourceTree = "<group>"; };
 		02FDF8992C10AAF100B450FC /* TopHeadlinesServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesServer.swift; sourceTree = "<group>"; };
 		02FDF89D2C10ABB300B450FC /* HomeDomainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDomainManager.swift; sourceTree = "<group>"; };
+		02FDF8A32C11164300B450FC /* ArticlePortfolioWatchApp Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArticlePortfolioWatchApp Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02FDF8A52C11164300B450FC /* ArticlePortfolioWatchAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePortfolioWatchAppApp.swift; sourceTree = "<group>"; };
+		02FDF8A72C11164300B450FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		02FDF8A92C11164400B450FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02FDF8AC2C11164400B450FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		02FDF8B52C11169400B450FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		02FDF8C22C11181700B450FC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		02FDF8C72C11185500B450FC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		02FDF8DF2C111CF700B450FC /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		02FDF8E42C111E3900B450FC /* ArticleOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOptionsView.swift; sourceTree = "<group>"; };
+		02FDF8E82C11230400B450FC /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		02FDF8EC2C11232A00B450FC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		02FDF8F22C11237000B450FC /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		02FDF8F72C1124D400B450FC /* ArticleRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleRowView.swift; sourceTree = "<group>"; };
+		02FDF9132C11E79300B450FC /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		02FDF9162C11E7B900B450FC /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
+		02FDF91B2C11FD0B00B450FC /* ArticleOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOptionsViewModel.swift; sourceTree = "<group>"; };
+		02FDF91D2C12039C00B450FC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		54B65206D2042925348EDE11 /* Pods-ArticlePortfolioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.release.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.release.xcconfig"; sourceTree = "<group>"; };
 		74661D37A0ABBEF684199368 /* Pods-ArticlePortfolioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.debug.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.debug.xcconfig"; sourceTree = "<group>"; };
+		764A23EC1AB3A6C193EB5876 /* Pods_ArticlePortfolioWatchApp_Watch_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticlePortfolioWatchApp_Watch_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E43422B245A8ED9DCB6375B5 /* Pods-ArticlePortfolioWatchApp Watch App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioWatchApp Watch App.release.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioWatchApp Watch App/Pods-ArticlePortfolioWatchApp Watch App.release.xcconfig"; sourceTree = "<group>"; };
 		E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticlePortfolioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F17C9F429CC606C09DEF0F19 /* Pods-ArticlePortfolioWatchApp Watch App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioWatchApp Watch App.debug.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioWatchApp Watch App/Pods-ArticlePortfolioWatchApp Watch App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +293,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02FDF8A02C11164300B450FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73A55E4801867F897FB220B2 /* Pods_ArticlePortfolioWatchApp_Watch_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -218,6 +309,7 @@
 			children = (
 				0218145C2C105A6100F39DB9 /* ArticlePortfolioApp */,
 				021815422C106B8700F39DB9 /* ArticlePortfolioAppTests */,
+				02FDF8A42C11164300B450FC /* ArticlePortfolioWatchApp Watch App */,
 				0218145B2C105A6100F39DB9 /* Products */,
 				7A19B66781155FCA59738AF4 /* Pods */,
 				6B6EF66AB2CFDD9E8980726D /* Frameworks */,
@@ -229,6 +321,7 @@
 			children = (
 				0218145A2C105A6100F39DB9 /* ArticlePortfolioApp.app */,
 				021815412C106B8700F39DB9 /* ArticlePortfolioAppTests.xctest */,
+				02FDF8A32C11164300B450FC /* ArticlePortfolioWatchApp Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,6 +329,7 @@
 		0218145C2C105A6100F39DB9 /* ArticlePortfolioApp */ = {
 			isa = PBXGroup;
 			children = (
+				02FDF8B52C11169400B450FC /* Info.plist */,
 				0218146E2C105AED00F39DB9 /* Modules */,
 				0218146B2C105AD700F39DB9 /* App */,
 				021814612C105A6200F39DB9 /* Assets.xcassets */,
@@ -355,6 +449,8 @@
 				021814912C105F4800F39DB9 /* MoyaProvider+Ext.swift */,
 				021814A82C10610600F39DB9 /* Publisher+Ext.swift */,
 				0218152C2C1065D800F39DB9 /* Color+Ext.swift */,
+				02FDF9132C11E79300B450FC /* Array+Ext.swift */,
+				02FDF9162C11E7B900B450FC /* Data+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -407,7 +503,7 @@
 		0218148A2C105EBD00F39DB9 /* Everything */ = {
 			isa = PBXGroup;
 			children = (
-				0218148B2C105EC300F39DB9 /* HomeAPI.swift */,
+				0218148B2C105EC300F39DB9 /* EverythingAPI.swift */,
 				0218148F2C105F2100F39DB9 /* EverythingServerProtocol.swift */,
 			);
 			path = Everything;
@@ -858,10 +954,152 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		02FDF8A42C11164300B450FC /* ArticlePortfolioWatchApp Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8DD2C111CEA00B450FC /* Utilis */,
+				02FDF8BE2C11180600B450FC /* Modules */,
+				02FDF8A52C11164300B450FC /* ArticlePortfolioWatchAppApp.swift */,
+				02FDF8A72C11164300B450FC /* ContentView.swift */,
+				02FDF8A92C11164400B450FC /* Assets.xcassets */,
+				02FDF8AB2C11164400B450FC /* Preview Content */,
+			);
+			path = "ArticlePortfolioWatchApp Watch App";
+			sourceTree = "<group>";
+		};
+		02FDF8AB2C11164400B450FC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8AC2C11164400B450FC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		02FDF8BE2C11180600B450FC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8BF2C11180A00B450FC /* Presentation */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		02FDF8BF2C11180A00B450FC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8EB2C11232700B450FC /* Main */,
+				02FDF8E72C1122FD00B450FC /* Favourites */,
+				02FDF8E32C111E2E00B450FC /* ArticleOptions */,
+				02FDF8C02C11180C00B450FC /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		02FDF8C02C11180C00B450FC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8C42C11184400B450FC /* ViewModel */,
+				02FDF8C12C11181000B450FC /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		02FDF8C12C11181000B450FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8C22C11181700B450FC /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		02FDF8C42C11184400B450FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8C72C11185500B450FC /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		02FDF8DD2C111CEA00B450FC /* Utilis */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8F52C1124C400B450FC /* CustomUI */,
+				02FDF8DE2C111CED00B450FC /* Managers */,
+			);
+			path = Utilis;
+			sourceTree = "<group>";
+		};
+		02FDF8DE2C111CED00B450FC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8DF2C111CF700B450FC /* WatchConnectivityManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		02FDF8E32C111E2E00B450FC /* ArticleOptions */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8E42C111E3900B450FC /* ArticleOptionsView.swift */,
+				02FDF91B2C11FD0B00B450FC /* ArticleOptionsViewModel.swift */,
+			);
+			path = ArticleOptions;
+			sourceTree = "<group>";
+		};
+		02FDF8E72C1122FD00B450FC /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8F12C11236800B450FC /* ViewModel */,
+				02FDF8F02C11236500B450FC /* View */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		02FDF8EB2C11232700B450FC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8EC2C11232A00B450FC /* MainView.swift */,
+				02FDF91D2C12039C00B450FC /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		02FDF8F02C11236500B450FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8E82C11230400B450FC /* FavouritesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		02FDF8F12C11236800B450FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8F22C11237000B450FC /* FavouritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		02FDF8F52C1124C400B450FC /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8F62C1124C800B450FC /* Rows */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		02FDF8F62C1124C800B450FC /* Rows */ = {
+			isa = PBXGroup;
+			children = (
+				02FDF8F72C1124D400B450FC /* ArticleRowView.swift */,
+			);
+			path = Rows;
+			sourceTree = "<group>";
+		};
 		6B6EF66AB2CFDD9E8980726D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */,
+				764A23EC1AB3A6C193EB5876 /* Pods_ArticlePortfolioWatchApp_Watch_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -871,6 +1109,8 @@
 			children = (
 				74661D37A0ABBEF684199368 /* Pods-ArticlePortfolioApp.debug.xcconfig */,
 				54B65206D2042925348EDE11 /* Pods-ArticlePortfolioApp.release.xcconfig */,
+				F17C9F429CC606C09DEF0F19 /* Pods-ArticlePortfolioWatchApp Watch App.debug.xcconfig */,
+				E43422B245A8ED9DCB6375B5 /* Pods-ArticlePortfolioWatchApp Watch App.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -887,10 +1127,12 @@
 				021814572C105A6100F39DB9 /* Frameworks */,
 				021814582C105A6100F39DB9 /* Resources */,
 				DBB9D322E26BCDF27E53A996 /* [CP] Embed Pods Frameworks */,
+				02FDF8B42C11164400B450FC /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				02FDF8AF2C11164400B450FC /* PBXTargetDependency */,
 			);
 			name = ArticlePortfolioApp;
 			productName = ArticlePortfolioApp;
@@ -915,6 +1157,25 @@
 			productReference = 021815412C106B8700F39DB9 /* ArticlePortfolioAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		02FDF8A22C11164300B450FC /* ArticlePortfolioWatchApp Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02FDF8B12C11164400B450FC /* Build configuration list for PBXNativeTarget "ArticlePortfolioWatchApp Watch App" */;
+			buildPhases = (
+				04AEC4727DA7FCCE254B5EB8 /* [CP] Check Pods Manifest.lock */,
+				02FDF89F2C11164300B450FC /* Sources */,
+				02FDF8A02C11164300B450FC /* Frameworks */,
+				02FDF8A12C11164300B450FC /* Resources */,
+				524B022A43D29D6817080C96 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ArticlePortfolioWatchApp Watch App";
+			productName = "ArticlePortfolioWatchApp Watch App";
+			productReference = 02FDF8A32C11164300B450FC /* ArticlePortfolioWatchApp Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -931,6 +1192,9 @@
 					021815402C106B8700F39DB9 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 021814592C105A6100F39DB9;
+					};
+					02FDF8A22C11164300B450FC = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -949,6 +1213,7 @@
 			targets = (
 				021814592C105A6100F39DB9 /* ArticlePortfolioApp */,
 				021815402C106B8700F39DB9 /* ArticlePortfolioAppTests */,
+				02FDF8A22C11164300B450FC /* ArticlePortfolioWatchApp Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -970,9 +1235,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02FDF8A12C11164300B450FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FDF8AD2C11164400B450FC /* Preview Assets.xcassets in Resources */,
+				02FDF8AA2C11164400B450FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04AEC4727DA7FCCE254B5EB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArticlePortfolioWatchApp Watch App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0B7D8D82E31F36AAE210E33F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -993,6 +1289,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		524B022A43D29D6817080C96 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArticlePortfolioWatchApp Watch App/Pods-ArticlePortfolioWatchApp Watch App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArticlePortfolioWatchApp Watch App/Pods-ArticlePortfolioWatchApp Watch App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArticlePortfolioWatchApp Watch App/Pods-ArticlePortfolioWatchApp Watch App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBB9D322E26BCDF27E53A996 /* [CP] Embed Pods Frameworks */ = {
@@ -1042,6 +1355,7 @@
 				02FDF8912C108F7100B450FC /* FavouriteArticlesSortType.swift in Sources */,
 				021815272C10656800F39DB9 /* OffsetObservingScrollView.swift in Sources */,
 				021814862C105E5700F39DB9 /* ArticleResponseDto.swift in Sources */,
+				02FDF9192C11E8E000B450FC /* Data+Ext.swift in Sources */,
 				021815192C1064B000F39DB9 /* SettingsScreenResolver.swift in Sources */,
 				021814952C105F5D00F39DB9 /* Constants.swift in Sources */,
 				0218149A2C10603C00F39DB9 /* ArticleRowView.swift in Sources */,
@@ -1065,7 +1379,7 @@
 				0218148E2C105EDF00F39DB9 /* String+Ext.swift in Sources */,
 				021814FB2C1062BD00F39DB9 /* SettingsScreenRoute.swift in Sources */,
 				021814B12C10622A00F39DB9 /* Loader.swift in Sources */,
-				0218148C2C105EC300F39DB9 /* HomeAPI.swift in Sources */,
+				0218148C2C105EC300F39DB9 /* EverythingAPI.swift in Sources */,
 				02FDF8952C10902D00B450FC /* FavouritesModule.swift in Sources */,
 				02FDF89E2C10ABB300B450FC /* HomeDomainManager.swift in Sources */,
 				021814E92C1062BD00F39DB9 /* ContentSizeCoordinator.swift in Sources */,
@@ -1079,7 +1393,9 @@
 				021814732C105D4600F39DB9 /* StatusCode.swift in Sources */,
 				0218153C2C1069D200F39DB9 /* HiddenNavBarView.swift in Sources */,
 				02FDF88E2C108E6000B450FC /* FavouritesNode.swift in Sources */,
+				02FDF9142C11E79300B450FC /* Array+Ext.swift in Sources */,
 				021814832C105E1D00F39DB9 /* APIEnvironment.swift in Sources */,
+				02FDF8E02C111CF700B450FC /* WatchConnectivityManager.swift in Sources */,
 				021815362C1067AA00F39DB9 /* SettingsModule.swift in Sources */,
 				021815382C1067BE00F39DB9 /* SettingsViewModel.swift in Sources */,
 				02FDF88C2C108E4000B450FC /* NavigationStore+FavouritesRouter.swift in Sources */,
@@ -1110,6 +1426,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		02FDF89F2C11164300B450FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FDF8D22C111A1C00B450FC /* MoyaProvider+Ext.swift in Sources */,
+				02FDF8D72C111A4000B450FC /* Constants.swift in Sources */,
+				02FDF8D12C111A1700B450FC /* StatusCode.swift in Sources */,
+				02FDF8CF2C1119C600B450FC /* EverythingServerProtocol.swift in Sources */,
+				02FDF8D82C111A4700B450FC /* LoggerPlugin.swift in Sources */,
+				02FDF91C2C11FD0B00B450FC /* ArticleOptionsViewModel.swift in Sources */,
+				02FDF8F82C1124D400B450FC /* ArticleRowView.swift in Sources */,
+				02FDF8D52C111A3300B450FC /* String+Ext.swift in Sources */,
+				02FDF8DB2C111A6900B450FC /* LogLevel.swift in Sources */,
+				02FDF8CB2C1118C900B450FC /* ArticleResponseDto.swift in Sources */,
+				02FDF8D32C111A2300B450FC /* TopHeadlinesAPI.swift in Sources */,
+				02FDF8DA2C111A5A00B450FC /* CustomLogger.swift in Sources */,
+				02FDF8E22C111D3500B450FC /* ArticleSwiftDataModel.swift in Sources */,
+				02FDF8CE2C11194800B450FC /* BaseViewModel.swift in Sources */,
+				02FDF8E62C111E3900B450FC /* ArticleOptionsView.swift in Sources */,
+				02FDF8C32C11181700B450FC /* HomeView.swift in Sources */,
+				02FDF8D62C111A3800B450FC /* APIEnvironment.swift in Sources */,
+				02FDF8A82C11164300B450FC /* ContentView.swift in Sources */,
+				02FDF8CA2C1118C500B450FC /* ArticleDto.swift in Sources */,
+				02FDF8DC2C111AA400B450FC /* ViewDidLoadModifier.swift in Sources */,
+				02FDF8D02C1119CC00B450FC /* TopHeadlinesServer.swift in Sources */,
+				02FDF8CC2C1118D100B450FC /* ArticleModelProtocol.swift in Sources */,
+				02FDF8F42C11237000B450FC /* FavouritesViewModel.swift in Sources */,
+				02FDF8A62C11164300B450FC /* ArticlePortfolioWatchAppApp.swift in Sources */,
+				02FDF8E12C111CF700B450FC /* WatchConnectivityManager.swift in Sources */,
+				02FDF91E2C12039C00B450FC /* MainViewModel.swift in Sources */,
+				02FDF8CD2C11192900B450FC /* Publisher+Ext.swift in Sources */,
+				02FDF8D92C111A5400B450FC /* DateFormatter+Ext.swift in Sources */,
+				02FDF8D42C111A2800B450FC /* EverythingAPI.swift in Sources */,
+				02FDF8EE2C11232A00B450FC /* MainView.swift in Sources */,
+				02FDF8C92C11188900B450FC /* HomeDomainManager.swift in Sources */,
+				02FDF8EA2C11230400B450FC /* FavouritesView.swift in Sources */,
+				02FDF8C82C11185500B450FC /* HomeViewModel.swift in Sources */,
+				02FDF91A2C11E8EA00B450FC /* Data+Ext.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1117,6 +1474,11 @@
 			isa = PBXTargetDependency;
 			target = 021814592C105A6100F39DB9 /* ArticlePortfolioApp */;
 			targetProxy = 021815452C106B8700F39DB9 /* PBXContainerItemProxy */;
+		};
+		02FDF8AF2C11164400B450FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02FDF8A22C11164300B450FC /* ArticlePortfolioWatchApp Watch App */;
+			targetProxy = 02FDF8AE2C11164400B450FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1244,6 +1606,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74661D37A0ABBEF684199368 /* Pods-ArticlePortfolioApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1253,6 +1616,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArticlePortfolioApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1280,6 +1644,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 54B65206D2042925348EDE11 /* Pods-ArticlePortfolioApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -1289,6 +1654,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArticlePortfolioApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1348,6 +1714,70 @@
 			};
 			name = Release;
 		};
+		02FDF8B22C11164400B450FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F17C9F429CC606C09DEF0F19 /* Pods-ArticlePortfolioWatchApp Watch App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ArticlePortfolioWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4G76GHV9RM;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ArticlePortfolioWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leopoldromanowski.ArticlePortfolioApp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leopoldromanowski.ArticlePortfolioApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		02FDF8B32C11164400B450FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E43422B245A8ED9DCB6375B5 /* Pods-ArticlePortfolioWatchApp Watch App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ArticlePortfolioWatchApp Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4G76GHV9RM;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ArticlePortfolioWatchApp;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.leopoldromanowski.ArticlePortfolioApp;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leopoldromanowski.ArticlePortfolioApp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1374,6 +1804,15 @@
 			buildConfigurations = (
 				021815472C106B8700F39DB9 /* Debug */,
 				021815482C106B8700F39DB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02FDF8B12C11164400B450FC /* Build configuration list for PBXNativeTarget "ArticlePortfolioWatchApp Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02FDF8B22C11164400B450FC /* Debug */,
+				02FDF8B32C11164400B450FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

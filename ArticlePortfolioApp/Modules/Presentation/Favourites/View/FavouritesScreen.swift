@@ -6,6 +6,7 @@ struct FavouritesScreen<ViewModel: Favourites.ViewModel>: View {
     private var favouriteArticles: [ArticleSwiftDataModel]
     @Environment(\.modelContext) private var modelContext
     @StateObject private var viewModel: ViewModel
+    @EnvironmentObject private var watchConnectivity: WatchConnectivityManager
     
     init(viewModel: ViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -28,6 +29,16 @@ struct FavouritesScreen<ViewModel: Favourites.ViewModel>: View {
         .toolbar {
             if favouriteArticles.count > 1 {
                 SortToolbarItem()
+            }
+        }
+        .onChange(of: watchConnectivity.notificationMessage) { _, notification in
+            guard let notification, let model = notification.model else { return }
+            switch notification.type {
+            case .favouriteArticleModel:
+                viewModel.updateFavouriteState(with: modelContext, model: model,
+                                               favouriteArticles: favouriteArticles)
+            default:
+                break
             }
         }
     }
@@ -69,4 +80,5 @@ struct FavouritesScreen<ViewModel: Favourites.ViewModel>: View {
 
 #Preview {
     FavouritesScreen(viewModel: FavouritesViewModel())
+        .environmentObject(WatchConnectivityManager.shared)
 }
