@@ -130,6 +130,8 @@
 		02FDF91A2C11E8EA00B450FC /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF9162C11E7B900B450FC /* Data+Ext.swift */; };
 		02FDF91C2C11FD0B00B450FC /* ArticleOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF91B2C11FD0B00B450FC /* ArticleOptionsViewModel.swift */; };
 		02FDF91E2C12039C00B450FC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF91D2C12039C00B450FC /* MainViewModel.swift */; };
+		02FDF91F2C121B5C00B450FC /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021814B02C10622A00F39DB9 /* Loader.swift */; };
+		02FDF9212C122CA400B450FC /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FDF9202C122CA400B450FC /* ContentViewModel.swift */; };
 		0F09119B31A3807AEAA348EA /* Pods_ArticlePortfolioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4716CBE12A91380B0805C71 /* Pods_ArticlePortfolioApp.framework */; };
 		73A55E4801867F897FB220B2 /* Pods_ArticlePortfolioWatchApp_Watch_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764A23EC1AB3A6C193EB5876 /* Pods_ArticlePortfolioWatchApp_Watch_App.framework */; };
 /* End PBXBuildFile section */
@@ -269,6 +271,7 @@
 		02FDF9162C11E7B900B450FC /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
 		02FDF91B2C11FD0B00B450FC /* ArticleOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOptionsViewModel.swift; sourceTree = "<group>"; };
 		02FDF91D2C12039C00B450FC /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		02FDF9202C122CA400B450FC /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		54B65206D2042925348EDE11 /* Pods-ArticlePortfolioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.release.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.release.xcconfig"; sourceTree = "<group>"; };
 		74661D37A0ABBEF684199368 /* Pods-ArticlePortfolioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArticlePortfolioApp.debug.xcconfig"; path = "Target Support Files/Pods-ArticlePortfolioApp/Pods-ArticlePortfolioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		764A23EC1AB3A6C193EB5876 /* Pods_ArticlePortfolioWatchApp_Watch_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArticlePortfolioWatchApp_Watch_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -370,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				0218145F2C105A6100F39DB9 /* ContentView.swift */,
+				02FDF9202C122CA400B450FC /* ContentViewModel.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -1390,6 +1394,7 @@
 				0218145E2C105A6100F39DB9 /* ArticlePortfolioAppApp.swift in Sources */,
 				02FDF8782C1072A500B450FC /* SettingsOptions.swift in Sources */,
 				021815162C1064B000F39DB9 /* ArticleDetailResolver.swift in Sources */,
+				02FDF9212C122CA400B450FC /* ContentViewModel.swift in Sources */,
 				021814732C105D4600F39DB9 /* StatusCode.swift in Sources */,
 				0218153C2C1069D200F39DB9 /* HiddenNavBarView.swift in Sources */,
 				02FDF88E2C108E6000B450FC /* FavouritesNode.swift in Sources */,
@@ -1449,6 +1454,7 @@
 				02FDF8D62C111A3800B450FC /* APIEnvironment.swift in Sources */,
 				02FDF8A82C11164300B450FC /* ContentView.swift in Sources */,
 				02FDF8CA2C1118C500B450FC /* ArticleDto.swift in Sources */,
+				02FDF91F2C121B5C00B450FC /* Loader.swift in Sources */,
 				02FDF8DC2C111AA400B450FC /* ViewDidLoadModifier.swift in Sources */,
 				02FDF8D02C1119CC00B450FC /* TopHeadlinesServer.swift in Sources */,
 				02FDF8CC2C1118D100B450FC /* ArticleModelProtocol.swift in Sources */,

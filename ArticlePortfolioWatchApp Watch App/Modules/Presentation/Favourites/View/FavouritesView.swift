@@ -21,7 +21,10 @@ struct FavouritesView: View {
                     }
                 }
                 .listStyle(.carousel)
-                .navigationTitle("Favourite articles")
+                .navigationTitle {
+                    Text("Favourite articles")
+                        .foregroundStyle(Color.primary)
+                }
             }
         }
     }

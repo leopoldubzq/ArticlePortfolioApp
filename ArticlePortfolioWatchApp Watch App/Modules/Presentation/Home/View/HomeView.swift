@@ -23,7 +23,10 @@ struct HomeView: View {
                     }
                 }
                 .listStyle(.carousel)
-                .navigationTitle("Tech articles")
+                .navigationTitle {
+                    Text("Tech articles")
+                        .foregroundStyle(Color.primary)
+                }
                 .onLoad {
                     viewModel.fetchArticles()
                 }
@@ -38,6 +41,11 @@ struct HomeView: View {
                         .environmentObject(watchConnectivity)
                 }
             })
+            .overlay {
+                if viewModel.isLoading {
+                    Loader()
+                }
+            }
         }
     }
     

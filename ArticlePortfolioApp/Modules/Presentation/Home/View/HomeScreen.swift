@@ -54,19 +54,6 @@ struct HomeScreen<ViewModel: Home.ViewModel>: View {
                     .scaleEffect(viewModel.isLoading ? 1 : 0.9)
                     .animation(.easeInOut(duration: 0.15), value: viewModel.isLoading)
             }
-            .task(id: favouriteArticles) {
-                sendFavouriteArticlesArrayToAppleWatch()
-            }
-            .onChange(of: watchConnectivity.notificationMessage) { _, notification in
-                guard let notification, let model = notification.model else { return }
-                switch notification.type {
-                case .favouriteArticleModel:
-                    viewModel.updateFavouriteState(with: modelContext, model: model,
-                                                   favouriteArticles: favouriteArticles)
-                default:
-                    break
-                }
-            }
         }
         .onLoad {
             viewModel.fetchArticles()

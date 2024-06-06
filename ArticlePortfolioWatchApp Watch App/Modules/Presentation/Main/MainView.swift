@@ -7,6 +7,7 @@ struct MainView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var favouriteArticles: [ArticleSwiftDataModel]
     @StateObject private var viewModel = MainViewModel()
+    @State private var confirmationAlertPresented: Bool = false
     
     var body: some View {
         TabView {
@@ -20,8 +21,16 @@ struct MainView: View {
             switch notification.type {
             case .favouriteArticlesList:
                 viewModel.saveItemsInDB(notification.favouriteArticlesList ?? [], withContext: modelContext)
+            case .syncWatchApp:
+                viewModel.saveItemsInDB(notification.favouriteArticlesList ?? [], withContext: modelContext)
+                confirmationAlertPresented = true
             default:
                 break
+            }
+        }
+        .alert("Data synchronized with iPhone", isPresented: $confirmationAlertPresented) {
+            Button("Ok") {
+                confirmationAlertPresented.toggle()
             }
         }
     }

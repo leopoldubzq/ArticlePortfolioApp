@@ -3,6 +3,7 @@ import SwiftData
 
 @main
 struct ArticlePortfolioAppApp: App {
+    
     //MARK: - PRIVATE PROPERTIES
     @ObservedObject private var dependencies = DependenciesFactory()
     @ObservedObject private var watchConnectivity = WatchConnectivityManager.shared

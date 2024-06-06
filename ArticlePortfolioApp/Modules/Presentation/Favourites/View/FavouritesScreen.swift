@@ -31,16 +31,6 @@ struct FavouritesScreen<ViewModel: Favourites.ViewModel>: View {
                 SortToolbarItem()
             }
         }
-        .onChange(of: watchConnectivity.notificationMessage) { _, notification in
-            guard let notification, let model = notification.model else { return }
-            switch notification.type {
-            case .favouriteArticleModel:
-                viewModel.updateFavouriteState(with: modelContext, model: model,
-                                               favouriteArticles: favouriteArticles)
-            default:
-                break
-            }
-        }
     }
     
     @ViewBuilder
@@ -75,6 +65,13 @@ struct FavouritesScreen<ViewModel: Favourites.ViewModel>: View {
                 }
             }
         }
+    }
+    
+    private func sendFavouriteArticlesArrayToAppleWatch() {
+        let articlesToSend = favouriteArticles
+            .map { $0.convertToArticleDto() }
+            .encoded
+        WatchConnectivityManager.shared.send(articlesToSend, type: .favouriteArticlesList)
     }
 }
 

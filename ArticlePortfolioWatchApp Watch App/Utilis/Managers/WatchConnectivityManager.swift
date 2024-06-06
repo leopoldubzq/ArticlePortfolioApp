@@ -3,11 +3,14 @@ import WatchConnectivity
 
 enum WatchConnectivityError: Error {
     case companionAppNotActive
+    case unknownError(String)
     
     var message: String {
         switch self {
         case .companionAppNotActive:
             "iPhone app not active"
+        case .unknownError(let message):
+            "\(message)"
         }
     }
 }
@@ -23,6 +26,7 @@ struct NotificationMessage: Identifiable, Equatable {
 enum WatchConnectivityMessage: String, CaseIterable {
     case favouriteArticleModel
     case favouriteArticlesList
+    case syncWatchApp
 }
 
 final class WatchConnectivityManager: NSObject, ObservableObject {
@@ -41,7 +45,8 @@ final class WatchConnectivityManager: NSObject, ObservableObject {
     //MARK: - PUBLIC METHODS
     func send(_ message: Any, type: WatchConnectivityMessage,
               completion: ((WatchConnectivityError?) -> Void)? = nil) {
-        guard WCSession.default.activationState == .activated else {
+        guard WCSession.default.activationState == .activated,
+              WCSession.default.isReachable else {
             completion?(.companionAppNotActive)
             return
         }
@@ -57,14 +62,16 @@ final class WatchConnectivityManager: NSObject, ObservableObject {
         }
         #endif
         
-        WCSession.default.sendMessage([type.rawValue : message], replyHandler: nil) { error in
-            print("Cannot send message: \(String(describing: error))")
-        }
+//        WCSession.default.sendMessage([type.rawValue : message], replyHandler: nil) { error in
+//            print("Cannot send message: \(String(describing: error))")
+//            completion?(.unknownError(error.localizedDescription))
+//        }
         
         do {
             try WCSession.default.updateApplicationContext([type.rawValue : message])
         } catch {
             print("Cannot send message: \(error)")
+            completion?(.unknownError(error.localizedDescription))
         }
     }
     
@@ -78,7 +85,7 @@ extension WatchConnectivityManager: WCSessionDelegate {
                messageType == .favouriteArticlesList {
                 let decodedArray: [ArticleDto] = message.decodeToArray()
                 DispatchQueue.main.async { [weak self] in
-                    self?.notificationMessage = NotificationMessage(title: nil, 
+                    self?.notificationMessage = NotificationMessage(title: nil,
                                                                     model: nil,
                                                                     favouriteArticlesList: decodedArray,
                                                                     type: .favouriteArticlesList)
@@ -87,9 +94,9 @@ extension WatchConnectivityManager: WCSessionDelegate {
         }
         
         if let messageType = WatchConnectivityMessage.allCases.first(where: { message[$0.rawValue] != nil }) {
-            if let message = message[messageType.rawValue] as? Data,
+            if let watchMessage = message[messageType.rawValue] as? Data,
                messageType == .favouriteArticleModel {
-                guard let decodedModel: ArticleDto = message.decode() else { return }
+                guard let decodedModel: ArticleDto = watchMessage.decode() else { return }
                 DispatchQueue.main.async { [weak self] in
                     self?.notificationMessage = NotificationMessage(title: nil,
                                                                     model: decodedModel,
@@ -100,7 +107,34 @@ extension WatchConnectivityManager: WCSessionDelegate {
         }
     }
     
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {}
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        if let messageType = WatchConnectivityMessage.allCases.first(where: { applicationContext[$0.rawValue] != nil }) {
+            if let message = applicationContext[messageType.rawValue] as? Data,
+               messageType == .favouriteArticlesList {
+                let decodedArray: [ArticleDto] = message.decodeToArray()
+                DispatchQueue.main.async { [weak self] in
+                    self?.notificationMessage = NotificationMessage(title: nil,
+                                                                    model: nil,
+                                                                    favouriteArticlesList: decodedArray,
+                                                                    type: .favouriteArticlesList)
+                }
+            }
+        }
+        
+        if let messageType = WatchConnectivityMessage.allCases.first(where: { applicationContext[$0.rawValue] != nil }) {
+            if let watchMessage = applicationContext[messageType.rawValue] as? Data,
+               messageType == .favouriteArticleModel {
+                guard let decodedModel: ArticleDto = watchMessage.decode() else { return }
+                DispatchQueue.main.async { [weak self] in
+                    self?.notificationMessage = NotificationMessage(title: nil,
+                                                                    model: decodedModel,
+                                                                    favouriteArticlesList: nil,
+                                                                    type: .favouriteArticleModel)
+                }
+            }
+        }
+    }
+    
     func session(_ session: WCSession,
                  activationDidCompleteWith activationState: WCSessionActivationState,
                  error: Error?) {}
