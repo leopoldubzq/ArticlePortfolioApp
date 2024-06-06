@@ -32,7 +32,7 @@
 ## watchOS
 <div style="display: flex; flex-direction: row;">
   <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/8728fded-aa53-411f-9048-b835832d367d" width="250"/>
-  <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/f22c8bec-476e-4e3e-966d-3649d1ce136a)" width="250"/>
+  <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/f22c8bec-476e-4e3e-966d-3649d1ce136a" width="250"/>
   <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/a90fb438-599e-4d35-9b6b-aef01681a8c5" width="250"/>
   <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/1d6d0d06-309b-40f7-9b84-7ed5a8c4bf8e" width="350"/>
 </div>
