@@ -3,7 +3,7 @@
 <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/baab4b6a-9f7c-49b4-a0ee-8d231c274133" width="300"/>
 
 ## Description
-**Article Portfolio App** is a mobile iOS application designed to display technology-related articles. By default, the app shows top headlines, but users can search for specific tech articles using queries. Users can also add specific articles to their favorites and view them in a dedicated "Favorites" tab. The app is built using SwiftUI with a clean MVVM architecture, utilizing Combine and the Moya framework. The project also includes unit tests with mock servers.
+**Article Portfolio App** is a mobile iOS application designed to display technology-related articles. By default, the app shows top headlines, but users can search for specific tech articles using queries. Users can also add specific articles to their favorites and view them in a dedicated "Favorites" tab. The app is built using SwiftUI with a clean MVVM architecture, utilizing Combine and the Moya framework. The project also includes unit tests with mock servers. Additionally, the app includes a watchOS companion app which communicates with its parent (iOS) app. In the watchOS app, users can browse through top headlines articles and add or remove articles from favorites. All changes are successfully updated on both sides – iOS and watchOS.
 
 <img src="https://github.com/leopoldubzq/ArticlePortfolioApp/assets/60520591/e28eb248-195b-4c2c-9710-a3dde02670a1" width="300"/>
 
@@ -18,6 +18,10 @@
 - MVVM pattern
 - clean architecture with separated layers such as Netowork or Domain
 - Utilizes Combine and Moya framework
+- Includes watchOS companion app:
+  - Browse top headlines
+  - Add or remove articles from favorites
+  - Synchronize changes between iOS and watchOS
 - Unit tests with mock servers
 - Supports light and dark mode
 
