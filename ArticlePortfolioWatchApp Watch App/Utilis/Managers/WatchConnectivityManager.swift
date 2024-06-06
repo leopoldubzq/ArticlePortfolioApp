@@ -62,10 +62,10 @@ final class WatchConnectivityManager: NSObject, ObservableObject {
         }
         #endif
         
-//        WCSession.default.sendMessage([type.rawValue : message], replyHandler: nil) { error in
-//            print("Cannot send message: \(String(describing: error))")
-//            completion?(.unknownError(error.localizedDescription))
-//        }
+        WCSession.default.sendMessage([type.rawValue : message], replyHandler: nil) { error in
+            print("Cannot send message: \(String(describing: error))")
+            completion?(.unknownError(error.localizedDescription))
+        }
         
         do {
             try WCSession.default.updateApplicationContext([type.rawValue : message])
