@@ -38,8 +38,6 @@ struct ContentView: View {
                 guard let model = notification.model else { return }
                 viewModel.updateFavouriteState(with: modelContext, model: model,
                                                favouriteArticles: favouriteArticles)
-            case .syncWatchApp:
-                sendFavouriteArticlesArrayToAppleWatch(messageType: .syncWatchApp)
             default:
                 break
             }

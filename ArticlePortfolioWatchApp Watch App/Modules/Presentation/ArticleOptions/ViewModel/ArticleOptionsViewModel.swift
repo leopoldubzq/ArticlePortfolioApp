@@ -1,6 +1,6 @@
 import SwiftUI
 import SwiftData
 
-final class ArticleOptionsViewModel: FavouriteArticlesProtocol & BaseViewModel {
+final class ArticleOptionsViewModel: ArticleOptions.ViewModel {
     @Published var favouriteArticles: [ArticleDto] = []
 }

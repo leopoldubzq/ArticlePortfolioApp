@@ -1,3 +1,3 @@
 enum Favourites {
-    typealias ViewModel = FavouritesViewModelProtocol & FavouriteArticlesProtocol & BaseViewModel
+    typealias ViewModel = FavouritesViewModelProtocol & FavouriteManagable & BaseViewModel
 }

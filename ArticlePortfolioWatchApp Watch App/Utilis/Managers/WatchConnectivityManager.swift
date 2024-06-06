@@ -26,7 +26,6 @@ struct NotificationMessage: Identifiable, Equatable {
 enum WatchConnectivityMessage: String, CaseIterable {
     case favouriteArticleModel
     case favouriteArticlesList
-    case syncWatchApp
 }
 
 final class WatchConnectivityManager: NSObject, ObservableObject {

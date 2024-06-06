@@ -12,7 +12,7 @@ extension HomeViewModelProtocol {
     }
 }
 
-final class HomeViewModel: HomeViewModelProtocol & Persistable & BaseViewModel {
+final class HomeViewModel: Home.ViewModel {
     
     //MARK: - PUBLIC PROPERTIES
     @Published var articles: [ArticleDto] = []

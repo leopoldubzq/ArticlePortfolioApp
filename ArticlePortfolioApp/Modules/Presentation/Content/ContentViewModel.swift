@@ -1,3 +1,3 @@
 import SwiftUI
 
-final class ContentViewModel: BaseViewModel & FavouriteArticlesProtocol {}
+final class ContentViewModel: BaseViewModel & FavouriteManagable {}
